@@ -1,0 +1,42 @@
+#       ___         ___                                                   ___           ___     
+#      /\  \       /\  \                                   _____         /\  \         /\  \    
+#     /::\  \     /::\  \                       ___       /::\  \       /::\  \       /::\  \   
+#    /:/\:\__\   /:/\:\  \                     /|  |     /:/\:\  \     /:/\:\  \     /:/\:\__\  
+#   /:/ /:/  /  /:/  \:\  \   ___     ___     |:|  |    /:/ /::\__\   /:/ /::\  \   /:/ /:/  /  
+#  /:/_/:/  /  /:/__/ \:\__\ /\  \   /\__\    |:|  |   /:/_/:/\:|__| /:/_/:/\:\__\ /:/_/:/__/___
+#  \:\/:/  /   \:\  \ /:/  / \:\  \ /:/  /  __|:|__|   \:\/:/ /:/  / \:\/:/  \/__/ \:\/:::::/  /
+#   \::/__/     \:\  /:/  /   \:\  /:/  /  /::::\  \    \::/_/:/  /   \::/__/       \::/~~/~~~~ 
+#    \:\  \      \:\/:/  /     \:\/:/  /   ~~~~\:\  \    \:\/:/  /     \:\  \        \:\~~\     
+#     \:\__\      \::/  /       \::/  /         \:\__\    \::/  /       \:\__\        \:\__\    
+#      \/__/       \/__/         \/__/           \/__/     \/__/         \/__/         \/__/    
+
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close = 
+label-close-foreground = ${colors.foreground-alt}
+label-separator = " "
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = 
+menu-0-0-exec = rofi -dmenu sudo reboot
+menu-0-1 = 
+menu-0-1-exec = sudo poweroff
+
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/scripts/updates-arch-combined.sh -c | sed -e "s/-//g"
+interval = 600
+label-underline = ${colors.alert}
+label-padding = 1
+
+double-click-left = termite -e yay
+click-right = termite -e "$(echo -e "arch\naur" | rofi -dmenu -no-custom -format "yay -Syu --s" | sed s/arch/repo/)"

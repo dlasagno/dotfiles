@@ -1,0 +1,45 @@
+#! /bin/sh
+
+#                     ___           ___         ___           ___           ___           ___     
+#      _____         /\__\         /\  \       /\  \         /\  \         /\  \         /\__\    
+#     /::\  \       /:/ _/_       /::\  \     _\:\  \       |::\  \       /::\  \       /:/  /    
+#    /:/\:\  \     /:/ /\  \     /:/\:\__\   /\ \:\  \      |:|:\  \     /:/\:\__\     /:/  /     
+#   /:/ /::\__\   /:/ /::\  \   /:/ /:/  /  _\:\ \:\  \   __|:|\:\  \   /:/ /:/  /    /:/  /  ___ 
+#  /:/_/:/\:|__| /:/_/:/\:\__\ /:/_/:/  /  /\ \:\ \:\__\ /::::|_\:\__\ /:/_/:/__/___ /:/__/  /\__\
+#  \:\/:/ /:/  / \:\/:/ /:/  / \:\/:/  /   \:\ \:\/:/  / \:\~~\  \/__/ \:\/:::::/  / \:\  \ /:/  /
+#   \::/_/:/  /   \::/ /:/  /   \::/__/     \:\ \::/  /   \:\  \        \::/~~/~~~~   \:\  /:/  / 
+#    \:\/:/  /     \/_/:/  /     \:\  \      \:\/:/  /     \:\  \        \:\~~\        \:\/:/  /  
+#     \::/  /        /:/  /       \:\__\      \::/  /       \:\__\        \:\__\        \::/  /   
+#      \/__/         \/__/         \/__/       \/__/         \/__/         \/__/         \/__/    
+
+
+# ▰▰▰ autostart ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+killall -q sxhkd
+sxhkd &
+
+#feh --randomize --bg-fill ~/Pictures/wallpapers/japanese-art/* &
+wal -i ~/Pictures/wallpapers/japanese-art -o ~/.config/wal/done.sh &
+
+$HOME/.config/polybar/launch.sh
+
+killall -q dunst
+dunst &
+
+killall -q compton
+compton -b &
+
+
+# ▰▰▰ settings ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+bspc monitor DP-1   -d α β γ
+bspc monitor HDMI-0 -d δ ε
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a discord desktop='^4'

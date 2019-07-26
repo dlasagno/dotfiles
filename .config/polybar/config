@@ -1,0 +1,94 @@
+#       ___         ___                                                   ___           ___     
+#      /\  \       /\  \                                   _____         /\  \         /\  \    
+#     /::\  \     /::\  \                       ___       /::\  \       /::\  \       /::\  \   
+#    /:/\:\__\   /:/\:\  \                     /|  |     /:/\:\  \     /:/\:\  \     /:/\:\__\  
+#   /:/ /:/  /  /:/  \:\  \   ___     ___     |:|  |    /:/ /::\__\   /:/ /::\  \   /:/ /:/  /  
+#  /:/_/:/  /  /:/__/ \:\__\ /\  \   /\__\    |:|  |   /:/_/:/\:|__| /:/_/:/\:\__\ /:/_/:/__/___
+#  \:\/:/  /   \:\  \ /:/  / \:\  \ /:/  /  __|:|__|   \:\/:/ /:/  / \:\/:/  \/__/ \:\/:::::/  /
+#   \::/__/     \:\  /:/  /   \:\  /:/  /  /::::\  \    \::/_/:/  /   \::/__/       \::/~~/~~~~ 
+#    \:\  \      \:\/:/  /     \:\/:/  /   ~~~~\:\  \    \:\/:/  /     \:\  \        \:\~~\     
+#     \:\__\      \::/  /       \::/  /         \:\__\    \::/  /       \:\__\        \:\__\    
+#      \/__/       \/__/         \/__/           \/__/     \/__/         \/__/         \/__/    
+
+
+; ▰▰▰ global wm settings ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
+
+
+; ▰▰▰ file inclusion ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+include-file = ~/.config/polybar/colors
+include-file = ~/.config/polybar/modules
+include-file = ~/.config/polybar/custom-modules
+
+
+# ▰▰▰ bars ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+[bar/example]
+monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 28
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FuraCode Nerd Font:style=Regular:size=12;1
+font-1 = FuraCode Nerd Font:style=Regular:size=10;1
+font-2 = FuraCode Nerd Font;1
+;font-0 = fixed:pixelsize=10;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-2 = siji:pixelsize=10;1
+
+modules-left = bspwm
+modules-center = xwindow
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = updates-arch-combined pulseaudio date powermenu
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+wm-restack = bspwm
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/bar1]
+inherit = bar/example
+
+[bar/bar2]
+inherit = bar/example
