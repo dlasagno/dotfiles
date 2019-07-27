@@ -19,7 +19,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run
+	rofi -show run -terminal termite
 
 # make sxhkd reload its configuration files:
 super + Escape
