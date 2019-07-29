@@ -21,7 +21,7 @@ sxhkd &
 #feh --randomize --bg-fill ~/Pictures/wallpapers/japanese-art/* &
 wal -i ~/Pictures/wallpapers/japanese-art -o ~/.config/wal/done.sh &
 
-~/.config/polybar/launch.sh
+pgrep polybar || ~/.config/polybar/launch.sh
 
 killall -q dunst
 dunst &
