@@ -69,7 +69,7 @@ font-2 = FuraCode Nerd Font;1
 ;font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
-modules-center = xwindow
+modules-center = mpd #xwindow
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = updates-arch-combined pulseaudio date powermenu
 
