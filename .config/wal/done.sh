@@ -32,3 +32,8 @@ ln -sf    "${HOME}/.cache/wal/dunstrc"    "${HOME}/.config/dunst/dunstrc"
 # Restart dunst with the new color scheme
 pkill dunst
 dunst &
+
+
+# ▰▰▰ sxiv ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+xrdb -load "${HOME}/.cache/wal/sxiv.Xresources"
