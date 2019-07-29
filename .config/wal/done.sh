@@ -17,8 +17,11 @@
 # Symlink config files so programs can be started
 # without referencing the cache directly
 #
-# Includes: termite, dunst
+# Includes: zathura, termite, dunst
 # ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+mkdir -p  "${HOME}/.config/zathura"
+ln -sf    "${HOME}/.cache/wal/zathurarc"    "${HOME}/.config/zathura/zathurarc"
 
 mkdir -p  "${HOME}/.config/termite"
 ln -sf    "${HOME}/.cache/wal/termite"    "${HOME}/.config/termite/config"
