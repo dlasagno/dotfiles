@@ -53,6 +53,25 @@ super + Pause
 	amixer set Headphone toggle -D hw:Headset
 
 
+# ▰▰▰ media/mpd controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+# pause/resume the current track
+super + Insert
+	mpc toggle
+
+# next track 
+super + Home
+	mpc next
+
+# prev track
+super + End
+	mpc prev
+
+# stop playing
+super + Delete
+	mpc stop
+
+
 # ▰▰▰ bspwm hotkeys ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 # quit/restart bspwm
