@@ -13,7 +13,7 @@
 
 # ▰▰▰ load wal ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
-#(cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 
 # ▰▰▰ set man/less colors ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰

@@ -13,6 +13,10 @@
 #      \/__/         \/__/         \/__/    
 
 
+# ▰▰▰ load color-scheme ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+(cat ~/.cache/wal/sequences &)
+
+
 # ▰▰▰ symlinks ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 # Symlink config files so programs can be started
 # without referencing the cache directly
