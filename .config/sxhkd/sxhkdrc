@@ -11,7 +11,7 @@
 #      \/__/         |/__/          \/__/         \/__/         \/__/         \/__/         \/__/    
 
 
-# ▰▰▰ wm independent hotkeys ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+# ▰▰▰ shortcuts ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 # terminal emulator
 super + Return
@@ -40,6 +40,10 @@ super + d
 # editor
 super + c
 	code
+
+# editing shortucts
+super + e; {period,s}
+	code {~/.config,~/scripts}
 
 
 # ▰▰▰ volume controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
