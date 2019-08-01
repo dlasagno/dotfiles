@@ -15,7 +15,7 @@
 HIST_STAMPS=dd/mm/yyyy
 
 # ▰▰▰ paths ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-#  empty for the moment
+export PATH=$PATH:$HOME/Go/bin
 
 # ▰▰▰ preferred text editor ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 export EDITOR=code
