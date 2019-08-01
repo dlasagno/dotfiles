@@ -29,8 +29,7 @@ dunst &
 killall -q compton
 compton -b &
 
-pgrep mopidy || (killall -q mopidy &&
-mopidy --config ~/.config/mopidy &)
+pgrep mopidy || (mopidy --config ~/.config/mopidy &)
 
 
 # ▰▰▰ settings ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰

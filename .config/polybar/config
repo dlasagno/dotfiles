@@ -92,3 +92,5 @@ inherit = bar/example
 
 [bar/bar2]
 inherit = bar/example
+
+modules-right = pulseaudio date powermenu
