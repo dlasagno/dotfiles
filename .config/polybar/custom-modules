@@ -26,9 +26,9 @@ label-separator = " "
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = 
-menu-0-0-exec = rofi -dmenu sudo reboot
+menu-0-0-exec = systemctl reboot
 menu-0-1 = 
-menu-0-1-exec = sudo poweroff
+menu-0-1-exec = systemctl poweroff
 
 
 [module/updates-arch-combined]
