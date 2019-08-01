@@ -25,3 +25,7 @@ export LESS_TERMCAP_so=$(tput rev; tput setaf 3)    # begin reverse video
 export LESS_TERMCAP_se=$(tput sgr0)                 # reset reverse video
 export LESS_TERMCAP_us=$(tput setaf 2)              # begin underline
 export LESS_TERMCAP_ue=$(tput sgr0)                 # reset underline
+
+# ▰▰▰ syntax highlighting ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
