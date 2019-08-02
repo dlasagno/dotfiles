@@ -30,7 +30,7 @@ super + p
 	$HOME/.config/polybar/launch.sh
 
 # browser
-super + f
+super + r
 	firefox
 
 # discord
