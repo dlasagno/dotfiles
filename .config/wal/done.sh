@@ -13,6 +13,18 @@
 #      \/__/         \/__/         \/__/    
 
 
+# ▰▰▰ bspwm colors ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+# source the colors.
+. "${HOME}/.cache/wal/colors.sh"
+
+# Set the border colors.
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color15"
+bspc config presel_feedback_color "$color1"
+
+
 # ▰▰▰ symlinks ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 # Symlink config files so programs can be started
 # without referencing the cache directly
@@ -21,7 +33,7 @@
 # ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 mkdir -p  "${HOME}/.config/zathura"
-ln -sf    "${HOME}/.cache/wal/zathurarc"    "${HOME}/.config/zathura/zathurarc"
+ln -sf    "${HOME}/.cache/wal/zathurarc"  "${HOME}/.config/zathura/zathurarc"
 
 mkdir -p  "${HOME}/.config/termite"
 ln -sf    "${HOME}/.cache/wal/termite"    "${HOME}/.config/termite/config"
