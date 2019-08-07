@@ -44,7 +44,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+32"
+    geometry = "300x5-30+34"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -69,17 +69,17 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 8
+    padding = 10
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 12
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "{color4}"
+    frame_color = "{foreground}"
 
     # Define a color for the separator.
     # possible values are:
