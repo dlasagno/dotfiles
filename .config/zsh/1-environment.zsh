@@ -15,7 +15,7 @@
 HIST_STAMPS=dd/mm/yyyy
 
 # ▰▰▰ paths ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-export PATH=$PATH:$HOME/Go/bin
+export PATH=$PATH:$HOME/Go/bin:$HOME/.local/bin
 
 # ▰▰▰ preferred text editor ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 export EDITOR=nvim
