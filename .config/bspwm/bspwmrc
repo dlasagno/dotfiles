@@ -31,6 +31,9 @@ compton -b &
 
 pgrep mopidy || (mopidy --config ~/.config/mopidy &)
 
+# adjust mouse acceleration
+xinput set-prop 14 300 -0.75
+
 
 # ▰▰▰ settings ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
