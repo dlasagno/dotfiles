@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#       ___           ___                                
+#      /\__\         /|  |                       ___     
+#     /:/ _/_       |:|  |         ___          /\  \    
+#    /:/ /\  \      |:|  |        /\__\         \:\  \   
+#   /:/ /::\  \   __|:|__|       /:/__/          \:\  \  
+#  /:/_/:/\:\__\ /::::\__\_____ /::\  \      ___  \:\__\ 
+#  \:\/:/ /:/  / ~~~~\::::/___/ \/\:\  \__  /\  \ |:|  | 
+#   \::/ /:/  /      |:|~~|      ~~\:\/\__\ \:\  \|:|  | 
+#    \/_/:/  /       |:|  |         \::/  /  \:\__|:|__| 
+#      /:/  /        |:|__|         /:/  /    \::::/__/  
+#      \/__/         |/__/          \/__/      ~~~~      
+
+
+while read file
+do
+  fullpath="$(pwd)/$file"
+
+  case "$1" in
+    # tests the wallpaper
+    "t")
+      wal -i $file -o ~/.config/wal/done.sh &
+      ;;
+
+    # saves the wallpaper to the pywal playlist
+    "s")
+      echo $fullpath >> ~/.config/wal/wallpapers
+      ;;
+    
+    # removes the wallpaper from the pywal playlist
+    "r")
+      grep -vwE "$fullpath" ~/.config/wal/wallpapers > ~/.config/wal/wallpapers
+      ;;
+  esac
+done
