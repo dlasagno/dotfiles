@@ -8,3 +8,4 @@ Just clone this repository in your $HOME folder
 
 ## Notes
 - to run soundcloud on mopidy a token must be set
+- a notification sound may be put in  .config/dunst and renamed sound.ogg (this can be changed in .config/dunst/sound.sh)
