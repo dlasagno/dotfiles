@@ -76,6 +76,19 @@ super + Delete
 	mpc stop
 
 
+# ▰▰▰ screenshots ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+# take a screenshot of the entire screen
+super + Print
+	mkdir -p ~/Pictures/screenshots && \
+	maim > ~/Pictures/screenshots/$(date +%s).png
+
+# take a screenshot of the current window
+super + shift + Print
+	mkdir -p ~/Pictures/screenshots && \
+	maim -i $(xdotool getactivewindow) -B > ~/Pictures/screenshots/$(date +%s).png
+
+
 # ▰▰▰ bspwm hotkeys ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 # quit/restart bspwm
