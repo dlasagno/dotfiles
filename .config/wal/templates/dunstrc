@@ -44,7 +44,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+34"
+    geometry = "300x60-30+34"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -66,17 +66,17 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 0
 
     # Padding between text and separator.
-    padding = 10
+    padding = 32
 
     # Horizontal padding.
-    horizontal_padding = 12
+    horizontal_padding = 32
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     frame_color = "{foreground}"
@@ -105,7 +105,7 @@
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 0
+    line_height = 4
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -283,7 +283,7 @@
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
+    history = ctrl+backslash
 
     # Context menu.
     context = ctrl+shift+period
