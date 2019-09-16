@@ -47,23 +47,26 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = %name%
-;label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.background}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-padding = 2
+label-occupied-background = ${colors.background}
+label-occupied-padding = 1
 
 label-urgent = %name%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %name%
+label-empty-background = ${colors.background}
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = " "
+label-separator-background = ${colors.background}
 
 [module/mpd]
 type = internal/mpd
@@ -170,15 +173,17 @@ time-alt = %H:%M:%S
 
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
+format-background = ${colors.background}
 format-underline = 
 
 label = %date%%time%
 
 [module/volume-commons]
 format-volume = <label-volume> <bar-volume>
+format-volume-prefix = " "
 ;label-volume = VOL %percentage%%
-label-volume =  %percentage%
-label-volume-foreground = ${root.foreground}
+label-volume = %percentage%
+label-volume-foreground = ${colors.foreground-alt}
 
 label-muted = sound muted
 label-muted-foreground = ${colors.secondary}
@@ -204,6 +209,10 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/pulseaudio
 
 inherit = module/volume-commons
+
+format-volume = <label-volume>
+format-volume-background = ${colors.background}
+format-muted-background = ${colors.background}
 
 [module/alsa]
 type = internal/alsa

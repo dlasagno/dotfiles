@@ -37,7 +37,7 @@ include-file = ~/.config/polybar/custom-modules
 
 # ▰▰▰ bars ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
-[bar/example]
+[bar/default]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 28
@@ -46,36 +46,39 @@ height = 28
 radius = 0.0
 fixed-center = false
 
-background = ${colors.background}
+background = ${colors.transparent}
+;background = #000f0f0f
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+line-size = 2
+line-color = ${colors.foreground}
 
 border-size = 0
-border-color = #00000000
+border-color = ${colors.foreground}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 0
 
 font-0 = FuraCode Nerd Font:style=Regular:size=12;1
 font-1 = FuraCode Nerd Font:style=Regular:size=10;1
-font-2 = FuraCode Nerd Font;1
+font-2 = FuraCode Nerd Font:style=Regular:size=18;4
+font-3 = mplus Nerd Font Mono;1
 ;font-0 = fixed:pixelsize=10;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm
+modules-left = space bspwm space arrow->
 modules-center = mpd #xwindow
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = updates-arch-combined pulseaudio date powermenu
+modules-right = arrow<- space updates-arch-combined space pulseaudio space date space powermenu space
 
 tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
+tray-padding = 12
+tray-offset-x = -0
+tray-background = ${colors.background}
 
 wm-restack = bspwm
 
@@ -85,12 +88,14 @@ wm-restack = bspwm
 ;scroll-down = bspwm-deskprev
 
 cursor-click = pointer
-cursor-scroll = ns-resize
+cursor-scroll = default
 
 [bar/bar1]
-inherit = bar/example
+inherit = bar/default
 
 [bar/bar2]
-inherit = bar/example
+inherit = bar/default
 
-modules-right = pulseaudio date powermenu
+modules-right = arrow<- space pulseaudio space date space powermenu space
+
+tray-position = none

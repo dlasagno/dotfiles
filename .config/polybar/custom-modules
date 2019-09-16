@@ -11,30 +11,57 @@
 #      \/__/       \/__/         \/__/           \/__/     \/__/         \/__/         \/__/    
 
 
+[module/arrow->]
+type = custom/text
+content = 
+content-foreground = ${colors.background}
+content-background = ${colors.transparent}
+content-font = 3
+ 
+[module/arrow<-]
+type = custom/text
+content = 
+content-foreground = ${colors.background}
+content-background = ${colors.transparent}
+content-font = 3
+
+[module/space]
+type = custom/text
+content = █
+content-foreground = ${colors.background}
+content-background = ${colors.transparent}
+content-font = 3
+
 [module/powermenu]
 type = custom/menu
 
 expand-right = true
 
-format-spacing = 1
+format-spacing = 0
 
 label-open = 
 label-open-foreground = ${colors.secondary}
+label-open-background = ${colors.background}
 label-close = 
 label-close-foreground = ${colors.foreground-alt}
-label-separator = " "
+label-close-background = ${colors.background}
+label-separator = "  "
 label-separator-foreground = ${colors.foreground-alt}
+label-separator-background = ${colors.background}
 
 menu-0-0 = 
+menu-0-0-background = ${colors.background}
 menu-0-0-exec = reboot
 menu-0-1 = 
+menu-0-1-background = ${colors.background}
 menu-0-1-exec = systemctl poweroff
 
 
 [module/updates-arch-combined]
 type = custom/script
-exec = ~/scripts/updates-arch-combined.sh -c | sed -e "s/-//g" &
+exec = ~/scripts/updates-arch-combined.sh -c | sed -e "s/-//g"
 interval = 600
+label-background = ${colors.background}
 label-underline = ${colors.alert}
 label-padding = 1
 
