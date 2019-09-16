@@ -37,8 +37,13 @@ xinput set-prop 14 300 -0.75
 
 # ▰▰▰ settings ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
-bspc monitor DP-1   -d α β γ
-bspc monitor HDMI-0 -d δ ε
+# greek numbers
+#bspc monitor DP-1   -d α β γ δ
+#bspc monitor HDMI-0 -d ε ϛ ζ
+
+# japanese numbers
+bspc monitor DP-1   -d 一 二 三 四
+bspc monitor HDMI-0 -d 五 六 七
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -47,4 +52,4 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a discord desktop='^4'
+bspc rule -a discord desktop='^5'
