@@ -15,7 +15,7 @@
 alias ls="ls -hF --color=auto"
 alias ll="ls -lahF --color=auto"
 alias mkdir="mkdir -p"
-alias grep="grep -i"
+alias grep="grep --color=auto"
 alias cp="cp -r"
 alias scp="scp -r"
 alias figlet="figlet -f isometric2 -w 128"
