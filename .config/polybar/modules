@@ -21,17 +21,18 @@ label-foreground = ${colors.foreground-alt}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix = " "
+;format-prefix-foreground = ${colors.foreground-alt}
+;format-prefix-underline = ${colors.secondary}
+format-background = ${colors.background}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+;label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+;label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -179,14 +180,24 @@ format-underline =
 label = %date%%time%
 
 [module/volume-commons]
-format-volume = <label-volume> <bar-volume>
-format-volume-prefix = " "
+format-volume = <ramp-volume> <label-volume>
+;format-volume-prefix = " "
 ;label-volume = VOL %percentage%%
 label-volume = %percentage%
+label-volume-font = 2
 label-volume-foreground = ${colors.foreground-alt}
 
-label-muted = sound muted
+format-muted-prefix = " "
+label-muted = muted
 label-muted-foreground = ${colors.secondary}
+
+; Remix Icon ramp
+ramp-volume-0 = 
+ramp-volume-1 = 
+; Fontawesome ramp
+; ramp-volume-0 = 
+; ramp-volume-1 = 
+; ramp-volume-2 = 
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${xrdb:color6:#55aa55}
@@ -210,7 +221,7 @@ type = internal/pulseaudio
 
 inherit = module/volume-commons
 
-format-volume = <label-volume>
+;format-volume = <ramp-volume> <label-volume>
 format-volume-background = ${colors.background}
 format-muted-background = ${colors.background}
 
@@ -235,20 +246,26 @@ format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -266,7 +283,13 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+; Remix Icon ramp
+ramp-0 = 
+ramp-1 = 
+; Fontawesome ramp
+; ramp-0 = 
+; ramp-1 = 
+; ramp-2 = 
+; ramp-3 = 
+; ramp-4 = 
 ramp-foreground = ${colors.foreground-alt}

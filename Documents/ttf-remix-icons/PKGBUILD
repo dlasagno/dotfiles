@@ -1,0 +1,16 @@
+# Maintainer: Daniele Lasagno <danielelasagno@gmail.com>
+
+pkgname=ttf-remix-icon
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Remix Icon iconic font"
+arch=('any')
+url="https://remixicon.com"
+license=('Apache')
+depends=('fontconfig' 'xorg-font-utils')
+source=(${pkgname}-v${pkgver}.tar.gz::https://github.com/Remix-Design/RemixIcon/archive/v${pkgver}.tar.gz)
+sha256sums=('SKIP')
+
+package() {
+  install -Dm644 $srcdir/RemixIcon-${pkgver}/fonts/remixicon.ttf $pkgdir/usr/share/fonts/TTF/remixicon.ttf
+}

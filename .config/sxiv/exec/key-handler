@@ -13,24 +13,42 @@
 #      \/__/         |/__/          \/__/      ~~~~      
 
 
-while read file
-do
-  fullpath="$(pwd)/$file"
+case "$1" in
+  "a")
+    tag=$(printf "" | rofi -dmenu -p tag)
+    while read file; do
+      "$HOME/scripts/wallpaper-manager/wal-tag.sh" add "$file" $tag
+    done
+    ;;
+  
+  "p")
+    prop=$(printf "" | rofi -dmenu -p prop)
+    while read file; do
+      "$HOME/scripts/wallpaper-manager/wal-prop.sh" set "$file" $prop
+    done
+    ;;
+  
+  *)
+    while read file
+    do
+      fullpath="$(pwd)/$file"
 
-  case "$1" in
-    # tests the wallpaper
-    "t")
-      wal -i $file -o ~/.config/wal/done.sh &
-      ;;
+      case "$1" in
+        # tests the wallpaper
+        "t")
+          wal -i "$file" -o ~/.config/wal/done.sh &
+          ;;
 
-    # saves the wallpaper to the pywal playlist
-    "s")
-      echo $fullpath >> ~/.config/wal/wallpapers
-      ;;
-    
-    # removes the wallpaper from the pywal playlist
-    "r")
-      grep -vwE "$fullpath" ~/.config/wal/wallpapers > ~/.config/wal/wallpapers
-      ;;
-  esac
-done
+        # saves the wallpaper to the pywal playlist
+        "s")
+          echo "$fullpath" >> ~/.config/wal/wallpapers
+          ;;
+        
+        # removes the wallpaper from the pywal playlist
+        "r")
+          grep -vwE "$fullpath" ~/.config/wal/wallpapers > ~/.config/wal/tmp && mv ~/.config/wal/tmp ~/.config/wal/wallpapers
+          ;;
+      esac
+    done
+    ;;
+esac

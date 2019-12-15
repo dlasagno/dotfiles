@@ -19,10 +19,18 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run -terminal termite
+	$HOME/scripts/rofi/appsmenu.sh
+
+# rofi/dmenu scripts
+super + alt + space; {i}
+	{$HOME/scripts/rofi/icon-list.sh}
+
+# open the powermenu
+super + q
+	$HOME/scripts/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
-super + Escape
+super +  Escape
 	pkill -USR1 -x sxhkd
 
 # reload polybar
@@ -81,12 +89,12 @@ super + Delete
 # take a screenshot of the entire screen
 super + Print
 	mkdir -p ~/Pictures/screenshots && \
-	maim > ~/Pictures/screenshots/$(date +%s).png
+	maim > ~/Pictures/screenshots/$(date +%s).png && notify-send "Screenshot acquired"
 
 # take a screenshot of the current window
 super + shift + Print
 	mkdir -p ~/Pictures/screenshots && \
-	maim -i $(xdotool getactivewindow) -B > ~/Pictures/screenshots/$(date +%s).png
+	maim -i $(xdotool getactivewindow) -B > ~/Pictures/screenshots/$(date +%s).png && notify-send "Screenshot acquired"
 
 
 # ▰▰▰ bspwm hotkeys ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰

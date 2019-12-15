@@ -19,10 +19,10 @@
 . "${HOME}/.cache/wal/colors.sh"
 
 # Set the border colors.
-bspc config normal_border_color "$color8"
-bspc config active_border_color "$color7"
-bspc config focused_border_color "$color1"
-bspc config presel_feedback_color "$color1"
+bspc config normal_border_color "${color0:?}"
+bspc config active_border_color "${color7:?}"
+bspc config focused_border_color "${color1:?}"
+bspc config presel_feedback_color "${color1:?}"
 
 
 # ▰▰▰ symlinks ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰

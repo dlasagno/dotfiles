@@ -62,10 +62,13 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = FuraCode Nerd Font:style=Regular:size=12;1
-font-1 = FuraCode Nerd Font:style=Regular:size=10;1
-font-2 = FuraCode Nerd Font:style=Regular:size=18;4
-font-3 = mplus Nerd Font Mono;1
+font-0 = Fira Code:style=Regular:size=12;2
+font-1 = Fira Code:style=Regular:size=11;3
+font-2 = remixicon:style=Regular:size=13;4
+font-3 = Font Awesome 5 Free:style=Regular:size=11;2
+font-4 = Font Awesome 5 Free:style=Solid:size=11;2
+font-5 = FuraCode Nerd Font:style=Regular:size=18;4
+font-6 = mplus Nerd Font Mono;2
 ;font-0 = fixed:pixelsize=10;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
