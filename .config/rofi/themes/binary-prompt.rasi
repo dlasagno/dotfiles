@@ -1,0 +1,17 @@
+@import "commons/settings.rasi"
+@import "commons/inputbar.rasi"
+@import "commons/listview.rasi"
+
+* {
+  background-color: @background;
+  text-color: @foreground-list;
+  font: @text-font;
+}
+#window {
+  padding: @binary-prompt-menu-padding;
+  children: [ inputbar, listview ];
+}
+#listview {
+  columns: 2;
+  lines: 1;
+}

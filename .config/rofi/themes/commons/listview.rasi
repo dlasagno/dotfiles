@@ -1,0 +1,17 @@
+@import "resolutions/1920x1080.rasi"
+
+#listview {
+  columns: 2;
+}
+#element {
+  padding: @list-element-padding;
+  margin: @list-element-margin;
+  border: @list-element-border;
+  background-color: @background-light;
+  border-color: @background-light;
+}
+#element.selected {
+  background-color: @background-focus;
+  text-color: @accent;
+  border-color: @accent;
+}

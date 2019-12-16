@@ -1,0 +1,18 @@
+@import "commons/settings.rasi"
+@import "commons/inputbar.rasi"
+@import "commons/listview.rasi"
+
+* {
+  background-color: @background;
+  text-color: @foreground-list;
+  font: @text-font;
+}
+#window {
+  padding: @list-8-window-padding;
+}
+#listview {
+  columns: 3;
+}
+#element {
+  //font: @icon-font-small;
+}

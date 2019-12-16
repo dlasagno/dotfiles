@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gotop
+GenericName=System Monitor
+Exec=/usr/bin/gotop
+Icon=utilities-system-monitor
+Terminal=true
+Type=Application

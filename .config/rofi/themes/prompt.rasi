@@ -1,0 +1,12 @@
+@import "commons/settings.rasi"
+@import "commons/inputbar.rasi"
+
+* {
+  background-color: @background;
+  text-color: @foreground-list;
+  font: @text-font;
+}
+#window {
+  padding: @prompt-menu-padding;
+  children: [ inputbar ];
+}
