@@ -22,8 +22,8 @@ super + @space
 	$HOME/scripts/rofi/appsmenu.sh
 
 # rofi/dmenu scripts
-super + alt + space; {i}
-	{$HOME/scripts/rofi/icon-list.sh}
+super + alt + space; {i,n,m,shift + m}
+	$HOME/scripts/rofi/{icon-list.sh,networkmenu.py,mount.sh,umount.sh}
 
 # open the powermenu
 super + q
@@ -50,8 +50,8 @@ super + c
 	code
 
 # editing shortucts
-super + e; {period,s}
-	code {~/.config,~/scripts}
+super + e; {period,p,r,s}
+	code {~/.config,~/.config/polybar,~/.config/rofi,~/scripts}
 
 
 # ▰▰▰ volume controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
