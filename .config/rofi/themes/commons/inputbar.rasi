@@ -1,4 +1,4 @@
-@import "resolutions/1920x1080.rasi"
+@import "settings.rasi"
 
 inputbar,
 prompt,
