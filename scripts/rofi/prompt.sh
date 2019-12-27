@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# This script opens a tofi based prompt
+# This script opens a rofi based prompt
 
 if [ "$2" = "--hide" ]; then
   hide="-password"
