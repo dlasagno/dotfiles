@@ -64,6 +64,14 @@ super + {Prior,Next}
 super + Pause
 	amixer set Headphone toggle -D hw:Headset
 
+# increase/decrease volume
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+	amixer set Master 5%{+,-} -M
+
+# mute/unmute
+XF86AudioMute
+	amixer set Master toggle
+
 
 # ▰▰▰ media/mpd controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
