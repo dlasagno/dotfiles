@@ -17,7 +17,7 @@ getmount() { \
 
 mountusb() { \
 	chosen="$(echo "$usbdrives" | rofi -dmenu -i -p "Mount which drive?" | awk '{print $1}')"
-	sudo -A mount "$chosen" 2>/dev/null && notify-send "💻 USB mounting" "$chosen mounted." && exit 0
+	sudo -A mount "$chosen" 2>/dev/null && notify-send " USB mounting" "$chosen mounted." && exit 0
 	alreadymounted=$(lsblk -nrpo "name,type,mountpoint" | awk '$2=="part"&&$3!~/\/boot|\/home$|SWAP/&&length($3)>1{printf "-not \\( -path *%s -prune \\) \\ \n",$3}')
 	getmount "/mnt /media /mount /home -maxdepth 5 -type d $alreadymounted"
 	partitiontype="$(lsblk -no "fstype" "$chosen")"
@@ -32,7 +32,7 @@ mountandroid() { \
 	chosen=$(echo "$anddrives" | rofi -dmenu -i -p "Which Android device?" | cut -d : -f 1)
 	getmount "$HOME -maxdepth 3 -type d"
 	simple-mtpfs --device "$chosen" "$mp"
-	notify-send "🤖 Android Mounting" "Android device mounted to $mp."
+	notify-send " Android Mounting" "Android device mounted to $mp."
 	}
 
 asktype() { \
@@ -46,7 +46,7 @@ anddrives=$(simple-mtpfs -l 2>/dev/null)
 usbdrives="$(lsblk -rpo "name,type,size,mountpoint" | awk '$2=="part"&&$4==""{printf "%s (%s)\n",$1,$3}')"
 
 if [ -z "$usbdrives" ]; then
-	[ -z "$anddrives" ] && echo "No USB drive or Android device detected" && exit
+	[ -z "$anddrives" ] && notify-send " USB mounting" "Couldn't find anything to mount." && echo "No USB drive or Android device detected" && exit
 	echo "Android device(s) detected."
 	mountandroid
 else
