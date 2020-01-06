@@ -15,7 +15,7 @@
 
 # terminal emulator
 super + Return
-	termite
+	$TERMINAL
 
 # program launcher
 super + @space
@@ -39,7 +39,7 @@ super + p
 
 # browser
 super + r
-	firefox
+	$BROWSER
 
 # discord
 super + d
@@ -47,11 +47,18 @@ super + d
 
 # editor
 super + c
-	code
+	$VISUAL
 
 # editing shortucts
 super + e; {period,p,r,s}
 	code {~/.config,~/.config/polybar,~/.config/rofi,~/scripts}
+
+
+# ▰▰▰ brightness controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+# increase/decrease brightness
+super + {a,b}
+	light {-A,-U} 10
 
 
 # ▰▰▰ volume controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
