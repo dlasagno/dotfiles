@@ -15,7 +15,7 @@
 
 # ▰▰▰ general ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
-set font                "FuraCode Nerd Font 12"
+set font                "monospace 12"
 #set guioptions          sv      # Show the vertical scrollbar, disabled because the scrollbar is difficult to see
 set adjust-open         width   # Make documents take up all the available space by default
 set statusbar-basename  true    # When using the status bar, show the basename only
