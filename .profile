@@ -2,6 +2,8 @@
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+# Adds cargo to $PATH
+export PATH="$HOME/.cargo/bin/$PATH"
 
 # Get default LARBS WM from ~/.local/share/larbs/wm
 #export LARBSWM="$(cat ~/.local/share/larbs/wm 2>/dev/null)" &&
