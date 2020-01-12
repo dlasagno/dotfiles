@@ -20,7 +20,7 @@
    * Values bellow are 'no-padding' ones for a size 50 (@icon-font) font, played around using this character: ■
    * We then add add 70 actual padding around the icons.
    *                                    -10px 0px   -15px -79px */
-  option-element-padding:               65px  65px  50px -15px;
+  option-element-padding:               65px  65px  50px -10px;
   option-3-window-padding:              293px 271px;
   option-3-listview-spacing:            140px;
   option-5-window-padding:              293px 131px;
