@@ -23,7 +23,6 @@ set statusbar-basename  true    # When using the status bar, show the basename o
 set render-loading false  # Do not show the "loading" text
 set scroll-step    120    # Increase the scroll distance when using j/k
 
-set smooth-scroll           true
 set window-title-home-tilde true
 set selection-clipboard     clipboard
 
