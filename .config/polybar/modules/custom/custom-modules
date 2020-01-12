@@ -1,0 +1,3 @@
+include-file = ~/.config/polybar/modules/custom/decorations
+include-file = ~/.config/polybar/modules/custom/powermenu
+include-file = ~/.config/polybar/modules/custom/updates

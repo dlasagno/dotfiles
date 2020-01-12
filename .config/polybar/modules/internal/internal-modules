@@ -1,0 +1,13 @@
+include-file = ~/.config/polybar/modules/internal/audio
+include-file = ~/.config/polybar/modules/internal/battery
+include-file = ~/.config/polybar/modules/internal/bspwm
+include-file = ~/.config/polybar/modules/internal/cpu
+include-file = ~/.config/polybar/modules/internal/date
+include-file = ~/.config/polybar/modules/internal/filesystem
+include-file = ~/.config/polybar/modules/internal/memory
+include-file = ~/.config/polybar/modules/internal/mpd
+include-file = ~/.config/polybar/modules/internal/network
+include-file = ~/.config/polybar/modules/internal/temperature
+include-file = ~/.config/polybar/modules/internal/xkeyboard
+include-file = ~/.config/polybar/modules/internal/xbacklight
+include-file = ~/.config/polybar/modules/internal/xwindow

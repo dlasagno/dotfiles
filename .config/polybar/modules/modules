@@ -1,0 +1,2 @@
+include-file = ~/.config/polybar/modules/internal/internal-modules
+include-file = ~/.config/polybar/modules/custom/custom-modules

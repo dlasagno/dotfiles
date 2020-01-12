@@ -1,0 +1,24 @@
+[module/xbacklight]
+type = internal/xbacklight
+enable-scroll = true
+
+label = %percentage%
+format = <label>
+format-prefix-foreground = ${colors.foreground-alt}
+format-background = ${colors.background}
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight

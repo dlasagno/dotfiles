@@ -1,0 +1,7 @@
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>
+
+label-song-font = 2
+label-song-maxlen = 25
+label-song-ellipsis = true

@@ -25,14 +25,12 @@ screenchange-reload = true
 margin-top = 0
 margin-bottom = 0
 
-; vim:ft=dosini
-
 
 ; ▰▰▰ file inclusion ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 include-file = ~/.config/polybar/colors
-include-file = ~/.config/polybar/modules
-include-file = ~/.config/polybar/custom-modules
+include-file = ~/.config/polybar/modules/modules
+include-file = ~/.config/polybar/icons/remix-icon
 
 
 # ▰▰▰ bars ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
@@ -47,7 +45,6 @@ radius = 0.0
 fixed-center = false
 
 background = ${colors.transparent}
-;background = #000f0f0f
 foreground = ${colors.foreground}
 
 line-size = 2
@@ -62,19 +59,16 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Fira Code:style=Regular:size=12;2
-font-1 = Fira Code:style=Regular:size=11;3
+font-0 = monospace:style=Regular:size=12;2
+font-1 = monospace:style=Regular:size=11;3
 font-2 = remixicon:style=Regular:size=13;4
 font-3 = Font Awesome 5 Free:style=Regular:size=11;2
 font-4 = Font Awesome 5 Free:style=Solid:size=11;2
 font-5 = FuraCode Nerd Font:style=Regular:size=18;4
 font-6 = mplus Nerd Font Mono;2
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
 
 modules-left = space bspwm space arrow->
-modules-center = mpd #xwindow
+;modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right = arrow<- space updates-arch-combined space pulseaudio space date space powermenu space
 
@@ -85,20 +79,20 @@ tray-background = ${colors.background}
 
 wm-restack = bspwm
 
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
 cursor-click = pointer
 cursor-scroll = default
 
-[bar/bar1]
+[bar/bar-primary]
 inherit = bar/default
 
-[bar/bar2]
+[bar/bar-secondary]
 inherit = bar/default
 
 modules-right = arrow<- space pulseaudio space date space powermenu space
 
 tray-position = none
+
+[bar/bar-laptop]
+inherit = bar/default
+
+modules-right = arrow<- space updates-arch-combined space battery space alsa space wlan space date space powermenu space

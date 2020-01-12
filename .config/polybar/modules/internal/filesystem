@@ -1,0 +1,12 @@
+[module/filesystem]
+type = internal/fs
+interval = 20
+
+mount-0 = /media/usb
+
+label-mounted = ${self.usb-icon}
+format-mounted-background = ${colors.background}
+
+label-unmounted = 
+label-unmounted-foreground = ${colors.foreground-alt}
+format-unmounted-background = ${colors.background}

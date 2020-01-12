@@ -1,0 +1,45 @@
+[module/volume-commons]
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%
+label-volume-foreground = ${colors.foreground}
+
+label-muted = M
+label-muted-foreground = ${colors.secondary}
+format-muted-prefix-foreground = ${colors.foreground-alt}
+format-muted-underline = ${colors.secondary}
+
+ramp-volume-foreground = ${colors.foreground-alt}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${xrdb:color6:#55aa55}
+bar-volume-foreground-1 = ${xrdb:color5:#55aa55}
+bar-volume-foreground-2 = ${xrdb:color4:#55aa55}
+bar-volume-foreground-3 = ${xrdb:color3:#55aa55}
+bar-volume-foreground-4 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-5 = ${xrdb:color1:#f5a70a}
+;bar-volume-foreground-6 = ${xrdb:color7:#ff5555}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+inherit = module/volume-commons
+
+;format-volume = <ramp-volume> <label-volume>
+format-volume-background = ${colors.background}
+format-muted-background = ${colors.background}
+
+[module/alsa]
+type = internal/alsa
+
+inherit = module/volume-commons
+
+format-volume-background = ${colors.background}
+format-muted-background = ${colors.background}
