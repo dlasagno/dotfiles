@@ -70,7 +70,7 @@ font-6 = mplus Nerd Font Mono;2
 modules-left = space bspwm space arrow->
 ;modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = arrow<- space updates-arch-combined space pulseaudio space date space powermenu space
+modules-right = arrow<- space updates-arch-combined space pulseaudio space eth space date space powermenu space
 
 tray-position = right
 tray-padding = 12

@@ -10,7 +10,7 @@ animation-discharging-1 = 
 format-prefix = " "
 
 [module/eth]
-format-connected-prefix = " "
+ramp-signal-0 = 
 
 [module/memory]
 format-prefix = " "

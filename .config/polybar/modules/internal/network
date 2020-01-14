@@ -17,14 +17,7 @@ format-disconnected =
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
-type = internal/network
+inherit = module/wlan
 interface = enp0s31f6
-interval = 3.0
 
-format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
-
-format-disconnected = 
-;format-disconnected = <label-disconnected>
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
