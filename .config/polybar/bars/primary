@@ -1,0 +1,2 @@
+[bar/bar-primary]
+inherit = bar/default

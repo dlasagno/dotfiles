@@ -1,0 +1,4 @@
+[bar/bar-laptop]
+inherit = bar/default
+
+modules-right = arrow<- space updates-arch-combined space battery space alsa space wlan space date space powermenu space

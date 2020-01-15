@@ -1,0 +1,4 @@
+include-file = ~/.config/polybar/bars/default
+  include-file = ~/.config/polybar/bars/primary
+  include-file = ~/.config/polybar/bars/secondary
+  include-file = ~/.config/polybar/bars/laptop

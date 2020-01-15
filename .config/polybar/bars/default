@@ -1,0 +1,45 @@
+[bar/default]
+monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 28
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.transparent}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.foreground}
+
+border-size = 0
+border-color = ${colors.foreground}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = monospace:style=Regular:size=12;2
+font-1 = monospace:style=Regular:size=11;3
+font-2 = remixicon:style=Regular:size=13;4
+font-3 = Font Awesome 5 Free:style=Regular:size=11;2
+font-4 = Font Awesome 5 Free:style=Solid:size=11;2
+font-5 = FuraCode Nerd Font:style=Regular:size=18;4
+font-6 = mplus Nerd Font Mono;2
+
+modules-left = space bspwm space arrow->
+;modules-center = xwindow
+modules-right = arrow<- space updates-arch-combined space pulseaudio space eth space date space powermenu space
+
+tray-position = right
+tray-padding = 12
+tray-offset-x = -0
+tray-background = ${colors.background}
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = default

@@ -1,0 +1,6 @@
+[bar/bar-secondary]
+inherit = bar/default
+
+modules-right = arrow<- space pulseaudio space date space powermenu space
+
+tray-position = none

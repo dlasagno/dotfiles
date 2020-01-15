@@ -2,6 +2,7 @@
 
 # Script to launch polybar bars
 
+
 # Terminate already running bar instances
 killall -q polybar
 
