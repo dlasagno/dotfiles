@@ -3,6 +3,7 @@ type = custom/text
 content = 
 content-foreground = ${colors.background}
 content-background = ${colors.transparent}
+content-padding = 0
 content-font = 6
 
 [module/arrow<-]
@@ -10,11 +11,12 @@ type = custom/text
 content = 
 content-foreground = ${colors.background}
 content-background = ${colors.transparent}
+content-padding = 0
 content-font = 6
 
 [module/space]
 type = custom/text
-content = █
-content-foreground = ${colors.background}
-content-background = ${colors.transparent}
+content = " "
+content-padding = 0
 content-font = 6
+content-offset = -1

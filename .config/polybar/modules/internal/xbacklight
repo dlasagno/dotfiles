@@ -5,7 +5,6 @@ enable-scroll = true
 label = %percentage%
 format = <label>
 format-prefix-foreground = ${colors.foreground-alt}
-format-background = ${colors.background}
 
 bar-width = 10
 bar-indicator = |

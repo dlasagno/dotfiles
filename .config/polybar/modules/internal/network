@@ -4,15 +4,10 @@ interface = wlp2s0
 interval = 3.0
 
 label-connected = %signal%
-;format-connected = <ramp-signal> <label-connected>
 format-connected = <ramp-signal>
-format-connected-background = ${colors.background}
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-foreground = ${colors.foreground-alt}
 

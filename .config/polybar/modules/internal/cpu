@@ -2,5 +2,4 @@
 type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
-format-background = ${colors.background}
 label = %percentage%

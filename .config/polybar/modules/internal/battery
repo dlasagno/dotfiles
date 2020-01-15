@@ -6,18 +6,15 @@ full-at = 98
 
 label-charging = %percentage%
 format-charging = <animation-charging> <label-charging>
-format-charging-background = ${colors.background}
 format-charging-underline = ${colors.primary}
 
 label-discharging = ${self.label-charging}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${colors.background}
 format-discharging-underline = ${colors.secondary}
 
 label-full = ${self.label-charging}
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full = <label-full>
-format-full-background = ${colors.background}
 format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-foreground = ${colors.foreground-alt}

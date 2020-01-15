@@ -36,6 +36,11 @@ screenchange-reload = true
 ;compositing-border = over
 ;pseudo-transparency = false
 
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 1
+
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0

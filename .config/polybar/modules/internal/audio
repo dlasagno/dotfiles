@@ -17,7 +17,6 @@ bar-volume-foreground-2 = ${xrdb:color4:#55aa55}
 bar-volume-foreground-3 = ${xrdb:color3:#55aa55}
 bar-volume-foreground-4 = ${xrdb:color2:#55aa55}
 bar-volume-foreground-5 = ${xrdb:color1:#f5a70a}
-;bar-volume-foreground-6 = ${xrdb:color7:#ff5555}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -32,14 +31,7 @@ type = internal/pulseaudio
 
 inherit = module/volume-commons
 
-;format-volume = <ramp-volume> <label-volume>
-format-volume-background = ${colors.background}
-format-muted-background = ${colors.background}
-
 [module/alsa]
 type = internal/alsa
 
 inherit = module/volume-commons
-
-format-volume-background = ${colors.background}
-format-muted-background = ${colors.background}

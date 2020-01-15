@@ -2,7 +2,6 @@
 type = custom/script
 exec = ~/scripts/updates-arch-combined.sh -c | sed -e "s/-//g"
 interval = 600
-label-background = ${colors.background}
 label-underline = ${colors.alert}
 label-padding = 1
 

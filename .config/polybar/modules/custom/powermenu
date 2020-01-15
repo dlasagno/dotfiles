@@ -6,22 +6,16 @@ expand-right = true
 format-spacing = 0
 
 label-open-foreground = ${colors.secondary}
-label-open-background = ${colors.background}
 label-close-foreground = ${colors.foreground-alt}
-label-close-background = ${colors.background}
 label-separator = "  "
 label-separator-foreground = ${colors.foreground-alt}
-label-separator-background = ${colors.background}
 
-menu-0-0-background = ${colors.background}
 menu-0-0-exec = reboot
-menu-0-1-background = ${colors.background}
 menu-0-1-exec = systemctl poweroff
 
 [module/powermenu]
 type = custom/text
 
 content-foreground = ${colors.primary}
-content-background = ${colors.background}
 
 click-left = $HOME/scripts/rofi/powermenu.sh

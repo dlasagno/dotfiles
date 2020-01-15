@@ -10,6 +10,8 @@ fixed-center = false
 background = ${colors.transparent}
 foreground = ${colors.foreground}
 
+dim-value = 1.0
+
 line-size = 2
 line-color = ${colors.foreground}
 
@@ -30,9 +32,9 @@ font-4 = Font Awesome 5 Free:style=Solid:size=11;2
 font-5 = FuraCode Nerd Font:style=Regular:size=18;4
 font-6 = mplus Nerd Font Mono;2
 
-modules-left = space bspwm space arrow->
+modules-left = bspwm arrow->
 ;modules-center = xwindow
-modules-right = arrow<- space updates-arch-combined space pulseaudio space eth space date space powermenu space
+modules-right = arrow<- space updates-arch-combined pulseaudio eth date powermenu space
 
 tray-position = right
 tray-padding = 12
