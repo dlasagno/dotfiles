@@ -1,3 +1,4 @@
+include-file = ~/.config/polybar/modules/custom/arch-updates
 include-file = ~/.config/polybar/modules/custom/decorations
+include-file = ~/.config/polybar/modules/custom/dots-updates
 include-file = ~/.config/polybar/modules/custom/powermenu
-include-file = ~/.config/polybar/modules/custom/updates

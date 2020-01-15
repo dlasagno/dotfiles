@@ -34,7 +34,7 @@ font-6 = mplus Nerd Font Mono;2
 
 modules-left = bspwm arrow->
 ;modules-center = xwindow
-modules-right = arrow<- space updates-arch-combined pulseaudio eth date powermenu space
+modules-right = arrow<- space dots-updates updates-arch-combined pulseaudio eth date powermenu space
 
 tray-position = right
 tray-padding = 12

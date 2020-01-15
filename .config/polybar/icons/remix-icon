@@ -9,6 +9,9 @@ animation-discharging-1 = 
 [module/cpu]
 format-prefix = " "
 
+[module/dots-updates]
+format-prefix = " "
+
 [module/eth]
 ramp-signal-0 = 
 
