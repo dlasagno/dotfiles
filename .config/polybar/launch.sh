@@ -24,10 +24,13 @@ esac
 
 # Launch polybar on every monitor
 for m in $(polybar --list-monitors | cut -d":" -f1); do
-  if [ ! -z "$(polybar --list-monitors | awk -v m="$m" '/m/ && /primary/')" ]; then
+  echo $m
+  if [ ! -z "$(polybar --list-monitors | awk -v m="$m" '$0 ~ m && /primary/')" ]; then
     MONITOR=$m polybar --reload $PRIMARY_BAR &
+    echo primary
   else
     MONITOR=$m polybar --reload bar-secondary &
+    echo secondary
   fi
 done
 
