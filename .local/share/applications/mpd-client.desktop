@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Ncmpcpp
+GenericName=MPD Client
+Exec=/usr/bin/ncmpcpp
+Icon=music
+Terminal=true
+Type=Application

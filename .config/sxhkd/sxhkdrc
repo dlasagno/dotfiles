@@ -83,19 +83,19 @@ XF86AudioMute
 # ▰▰▰ media/mpd controls ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 # pause/resume the current track
-super + Insert
+{super + Insert, XF86AudioPlay}
 	mpc toggle
 
 # next track 
-super + Home
+{super + Home, XF86AudioNext}
 	mpc next
 
 # prev track
-super + End
+{super + End, XF86AudioPrev}
 	mpc prev
 
 # stop playing
-super + Delete
+{super + Delete, XF86AudioStop}
 	mpc stop
 
 
