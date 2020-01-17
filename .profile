@@ -33,7 +33,7 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 
-#mpd >/dev/null 2>&1 &
+mpd >/dev/null 2>&1 &
 
 #[ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
 
