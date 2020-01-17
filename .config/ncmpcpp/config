@@ -69,7 +69,7 @@ visualizer_sync_interval = 30
 # with fftw3 support.
 #
 # Available values: spectrum, wave, wave_filled, ellipse.
-visualizer_type = wave
+visualizer_type = wave_filled
 
 visualizer_look = ●▮
 
@@ -422,7 +422,7 @@ mouse_support = yes
 #
 #search_engine_default_search_mode = 1
 
-external_editor = code
+#external_editor = code
 
 # Note: set to yes if external editor is a console application.
 #use_console_editor = yes
@@ -469,15 +469,15 @@ external_editor = code
 
 #state_flags_color = default:b
 
-#main_window_color = yellow
+main_window_color = red
 
-#color1 = white
+color1 = white
 
-#color2 = green
+color2 = red
 
 #progressbar_color = black:b
 
-#progressbar_elapsed_color = green:b
+progressbar_elapsed_color = red:b
 
 #statusbar_color = default
 
@@ -487,6 +487,6 @@ external_editor = code
 
 #alternative_ui_separator_color = black:b
 
-#window_border_color = green
+window_border_color = red
 
 #active_window_border = red
