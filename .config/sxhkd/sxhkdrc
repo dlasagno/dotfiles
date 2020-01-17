@@ -103,13 +103,11 @@ XF86AudioMute
 
 # take a screenshot of the entire screen
 super + Print
-	mkdir -p ~/Pictures/screenshots && \
-	maim > ~/Pictures/screenshots/$(date +%s).png && notify-send "Screenshot acquired"
+	$HOME/scripts/take-screenshot.sh
 
 # take a screenshot of the current window
 super + shift + Print
-	mkdir -p ~/Pictures/screenshots && \
-	maim -i $(xdotool getactivewindow) -B > ~/Pictures/screenshots/$(date +%s).png && notify-send "Screenshot acquired"
+	$HOME/scripts/take-screenshot.sh --window
 
 
 # ▰▰▰ bspwm hotkeys ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰

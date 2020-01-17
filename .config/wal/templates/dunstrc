@@ -44,7 +44,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x60-30+34"
+    geometry = "320x60-30+34"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -175,10 +175,10 @@
     # ▰▰▰ icons ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 128
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
