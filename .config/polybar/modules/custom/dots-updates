@@ -5,4 +5,4 @@ interval = 600
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.alert}
 
-double-click-left = git --git-dir=$HOME/dotfiles-git --work-tree=$HOME pull && notify-send " Dotfiles updates" || notify-send " Couldn't update dotfiles"
+double-click-left = git --git-dir=$HOME/dotfiles-git --work-tree=$HOME pull && notify-send " Dotfiles updated" || notify-send " Couldn't update dotfiles"
