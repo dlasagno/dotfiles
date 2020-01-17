@@ -25,7 +25,7 @@
   option-3-listview-spacing:            140px;
   option-5-window-padding:              293px 131px;
   option-5-listview-spacing:            52px;
-  option-6-listview-spacing:            30px;
+  option-6-listview-spacing:            26px;
   /* appsmenu */
   apps-textbox-prompt-colon-padding:    16px;
   /* mpdmenu */
