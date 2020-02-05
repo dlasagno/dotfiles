@@ -4,5 +4,5 @@ exec = ~/scripts/updates-arch-combined.sh -c | sed -e "s/-//g"
 interval = 600
 label-underline = ${colors.alert}
 
-double-click-left = termite -e yay &
-click-right = termite -e "$(echo -e "arch\naur" | rofi -dmenu -no-custom -format "yay -Syu --s" | sed s/arch/repo/)" &
+double-click-left = $TERMINAL -e yay &
+click-right = $TERMINAL -e "$(echo -e "arch\naur" | rofi -dmenu -no-custom -format "yay -Syu --s" | sed s/arch/repo/)" &
