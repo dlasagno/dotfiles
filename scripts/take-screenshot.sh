@@ -5,7 +5,19 @@
 
 SCREENSHOT="$HOME/Pictures/screenshots/$(date +%s).png"
 
+
 mkdir -p "$HOME/Pictures/screenshots"
 
-maim > "$SCREENSHOT"
+$HOME/scripts/rofi/capture-menu.sh > "$SCREENSHOT"
+
+if [ ! -s "$SCREENSHOT" ]; then
+  cat "$SCREENSHOT"
+  rm "$SCREENSHOT"
+  exit 1
+fi
+
 notify-send "Screenshot acquired" -i "$SCREENSHOT"
+
+if [ "$1" = "--clipboard" ]; then
+  xclip -selection clipboard -t image/png  -i "$SCREENSHOT"
+fi
