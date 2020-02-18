@@ -44,7 +44,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "320x60-30+34"
+    geometry = "480x60-30+34"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -141,8 +141,9 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
-
+    #format = "<b>%s</b>\n<span foreground='red'>%b</span>"
+    format = "<span size='large' foreground='{color1}'></span><b><span background='{color1}'> %s </span></b><span size='large' foreground='{color1}'></span>\n%b"
+    
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
     alignment = left
