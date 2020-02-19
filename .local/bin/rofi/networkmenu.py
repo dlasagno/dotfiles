@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # encoding:utf8
+
 """NetworkManager command line dmenu script.
 
 To add new connections or enable/disable networking requires policykit
@@ -12,6 +13,7 @@ Add dmenu formatting options and default terminal if desired to
 ~/.config/networkmanager-dmenu/config.ini
 
 """
+
 import itertools
 import locale
 import os

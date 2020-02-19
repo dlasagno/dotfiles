@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Script to take screenshots
 
@@ -8,7 +8,7 @@ SCREENSHOT="$HOME/Pictures/screenshots/$(date +%s).png"
 
 mkdir -p "$HOME/Pictures/screenshots"
 
-$MIELE_SCRIPTS/rofi/capture-menu.sh > "$SCREENSHOT"
+"$MIELE_SCRIPTS/rofi/capture-menu.sh" > "$SCREENSHOT"
 
 if [ ! -s "$SCREENSHOT" ]; then
   cat "$SCREENSHOT"

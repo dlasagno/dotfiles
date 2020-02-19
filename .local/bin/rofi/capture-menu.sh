@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 rofi_command="rofi -theme themes/capture-menu.rasi"
 

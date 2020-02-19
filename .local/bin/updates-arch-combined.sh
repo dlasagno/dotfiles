@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+
 # Counts the number of updates available on an arch based system
 # yay should be installed for aur
 # checkupadtes should be installed for repo, but yay works too
