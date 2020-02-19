@@ -5,6 +5,9 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 # Adds cargo to $PATH
 export PATH="$HOME/.cargo/bin/$PATH"
 
+# Miele settings
+export MIELE_SCRIPTS="$HOME/.local/bin"
+
 # Get default LARBS WM from ~/.local/share/larbs/wm
 #export LARBSWM="$(cat ~/.local/share/larbs/wm 2>/dev/null)" &&
 #	[ "$LARBSWM" = "dwm" ] || export LARBSWM="i3"
@@ -13,7 +16,7 @@ export PATH="$HOME/.cargo/bin/$PATH"
 export EDITOR="nvim"
 export VISUAL="code"
 export TERMINAL="termite"
-export BROWSER="firefox"
+export BROWSER="brave"
 export READER="zathura"
 export FILE="ranger"
 export STATUSBAR="polybar"

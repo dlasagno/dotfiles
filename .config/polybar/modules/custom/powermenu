@@ -18,4 +18,4 @@ type = custom/text
 
 content-foreground = ${colors.primary}
 
-click-left = $HOME/scripts/rofi/powermenu.sh
+click-left = $MIELE_SCRIPTS/rofi/powermenu.sh

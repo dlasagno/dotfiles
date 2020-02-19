@@ -11,27 +11,27 @@ if [ -z "$1" ]; then
    exit 1;
 fi
 
-wallpaper=$("$HOME/scripts/wallpaper-manager/wal-tag.sh" query "$WALLPAPERS_DIR/" "$@" | shuf -n 1)
+wallpaper=$("$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" query "$WALLPAPERS_DIR/" "$@" | shuf -n 1)
 if ! [ -e "$wallpaper" ]; then
    printf "Couldn't find any wallpaper with the specified tags\n"
    exit 2;
 fi
 
 
-if [ "$("$HOME/scripts/wallpaper-manager/wal-prop.sh" get "$wallpaper" multi-monitor)" = "true" ]; then
+if [ "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" multi-monitor)" = "true" ]; then
    multi_monitor="--no-xinerama"
 else
    multi_monitor=
 fi
 
-if [ -n "$("$HOME/scripts/wallpaper-manager/wal-prop.sh" get "$wallpaper" saturation)" ]; then
-   saturation="--saturate $("$HOME/scripts/wallpaper-manager/wal-prop.sh" get "$wallpaper" saturation)"
+if [ -n "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" saturation)" ]; then
+   saturation="--saturate $("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" saturation)"
 else
    saturation=
 fi
 
-if [ -n "$("$HOME/scripts/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)" ]; then
-   backend="$("$HOME/scripts/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)"
+if [ -n "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)" ]; then
+   backend="$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)"
 else
    backend="wal"
 fi

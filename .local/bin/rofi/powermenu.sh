@@ -28,7 +28,7 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        "$HOME/scripts/lock-screen.sh"
+        "$MIELE_SCRIPTS/lock-screen.sh"
         ;;
     $suspend)
         # mpc -q pause

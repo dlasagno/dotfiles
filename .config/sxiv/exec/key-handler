@@ -17,14 +17,14 @@ case "$1" in
   "a")
     tag=$(printf "" | rofi -dmenu -p tag)
     while read file; do
-      "$HOME/scripts/wallpaper-manager/wal-tag.sh" add "$file" $tag
+      "$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" add "$file" $tag
     done
     ;;
   
   "p")
     prop=$(printf "" | rofi -dmenu -p prop)
     while read file; do
-      "$HOME/scripts/wallpaper-manager/wal-prop.sh" set "$file" $prop
+      "$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" set "$file" $prop
     done
     ;;
   
