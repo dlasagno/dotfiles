@@ -1,6 +1,10 @@
 @import "settings.rasi"
 
+#mainbox {
+  background-color: transparent;
+}
 #listview {
+  background-color: transparent;
   columns: 2;
 }
 #element {

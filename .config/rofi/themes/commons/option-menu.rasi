@@ -15,10 +15,12 @@
   children: [ horibox ];
 }
 #horibox {
+  background-color: transparent;
   orientation: horizontal;
   children: [ listview ];
 }
 #listview {
+  background-color: transparent;
   layout: horizontal;
 }
 #element {
