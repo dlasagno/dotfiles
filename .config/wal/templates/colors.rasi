@@ -2,7 +2,7 @@
 
 * {{
   accent:           {color1};
-  background:       {color0}cc;
+  background:       {color0}e6;
   background-light: {color8}33;
   background-focus: {color8}70;
   foreground:       {color7};
