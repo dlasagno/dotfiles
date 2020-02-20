@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Counts the number of updates available on an arch based system
 # yay should be installed for aur
@@ -13,7 +13,7 @@ else
     updates_arch=$(yay -Qu --repo 2> /dev/null | wc -l )
 fi
 
-if ! [ $updates_arch ]; then
+if ! [ "$updates_arch" ]; then
     updates_arch=0
 fi
 
