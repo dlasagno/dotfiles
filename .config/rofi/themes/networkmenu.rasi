@@ -14,6 +14,12 @@ configuration {
 #window {
   padding: @list-8-window-padding;
 }
+#mainbox {
+  background-color: transparent;
+}
+#listview {
+  background-color: transparent;
+}
 inputbar,
 prompt,
 textbox-prompt-colon,
