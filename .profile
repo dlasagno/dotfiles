@@ -20,6 +20,7 @@ export BROWSER="brave"
 export READER="zathura"
 export FILE="ranger"
 export STATUSBAR="polybar"
+export WM="bspwm"
 
 # ~/ Clean-up:
 export LESSHISTFILE="-"

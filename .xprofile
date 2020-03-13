@@ -1,0 +1,14 @@
+ 
+#!/usr/bin/env sh
+
+# This file runs when a DM logs you into a graphical session.
+
+# Fix Gnome Apps Slow  Start due to failing services
+# Add this when you include flatpak in your system
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
+compton &		# compositor
+dunst &			# dunst for notifications
+xset r rate 300 50 &	# speed xrate up (keyboard repeat rate)
+#notify-send -i ~/.local/share/larbs/larbs.png "Welcome to LARBS" "Press super+F1 for the help menu." # LARBSWELCOME
+
