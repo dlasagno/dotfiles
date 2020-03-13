@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /usr/bin/env sh
 
 #                     ___           ___         ___           ___           ___           ___     
 #      _____         /\__\         /\  \       /\  \         /\  \         /\  \         /\__\    
@@ -13,24 +13,23 @@
 #      \/__/         \/__/         \/__/       \/__/         \/__/         \/__/         \/__/    
 
 
+# ▰▰▰ load resources ▰▰▰▰▰▰▰▰▰▰▰▰
+
+# load miele settings
+. "$HOME/.config/miele/mielerc"
+
+
 # ▰▰▰ autostart ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
+# hotkeys daemon
 killall -q sxhkd
 sxhkd &
 
-#feh --randomize --bg-fill ~/Pictures/wallpapers/japanese-art/* &
-#wal -i $(cat ~/.config/wal/wallpapers | shuf -n 1) -o ~/.config/wal/done.sh &
-~/scripts/wallpaper-manager/wal-set.sh +drawing
+# set wallpaper
+~/scripts/wallpaper-manager/wal-set.sh $WAL_TAGS
 
+# start ther status bar
 pgrep polybar || ~/.config/polybar/launch.sh
-
-killall -q dunst
-dunst &
-
-killall -q compton
-compton -b &
-
-pgrep mopidy || (mopidy --config ~/.config/mopidy &)
 
 # adjust mouse acceleration
 xinput set-prop 14 300 -0.75
@@ -38,16 +37,17 @@ xinput set-prop 14 300 -0.75
 
 # ▰▰▰ settings ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
-# greek numbers
-#bspc monitor DP-1   -d α β γ δ
-#bspc monitor HDMI-0 -d ε ϛ ζ
+# set desktop names
+bspc monitor DP-1   -d $(echo "$DESKTOP_NAMES" | cut -f1-4 -d " ")
+bspc monitor HDMI-0 -d $(echo "$DESKTOP_NAMES" | cut -f5-9 -d " ")
+bspc monitor LVDS-1 -d $(echo "$DESKTOP_NAMES" | cut -f1-9 -d " ")
 
-# japanese numbers
-bspc monitor DP-1   -d 一 二 三 四
-bspc monitor HDMI-0 -d 五 六 七
+# have border only on focused windows
+bspc config border_width 0
+pkill -f border-on-focused.sh
+"$MIELE_SCRIPTS"/bspwm/border-on-focused.sh 1 &
 
-bspc config border_width         0
-bspc config window_gap          12
+bspc config window_gap           12
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
