@@ -20,3 +20,5 @@ export WAL_TAGS="+coast"
 #export DESKTOP_NAMES="α β γ δ ε ϛ ζ"
 #export DESKTOP_NAMES="一 二 三 四 五 六 七"
 export DESKTOP_NAMES="1 2 3 4 5 6 7"
+
+export COMPTON_BLUR=false
