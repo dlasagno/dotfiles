@@ -46,5 +46,6 @@ wal \
 
 feh \
   "$wallpaper" \
+  --no-fehbg \
   --bg-fill \
   $multi_monitor

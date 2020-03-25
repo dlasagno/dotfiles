@@ -64,11 +64,13 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{green}└─╼%f "
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh root_indicator dir dir_writable vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status)
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
 POWERLEVEL9K_FOLDER_ICON=' '
 POWERLEVEL9K_HOME_ICON=" "
 POWERLEVEL9K_HOME_SUB_ICON=" "
 POWERLEVEL9K_EXECUTION_TIME_ICON=""
 POWERLEVEL9K_OK_ICON=""
 POWERLEVEL9K_FAIL_ICON=""
+
+# ▰▰▰ load powerlevel10k ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

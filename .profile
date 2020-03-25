@@ -2,8 +2,6 @@
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-# Adds cargo to $PATH
-export PATH="$HOME/.cargo/bin/$PATH"
 
 # Miele settings
 export MIELE_SCRIPTS="$HOME/.local/bin"
@@ -23,8 +21,16 @@ export STATUSBAR="polybar"
 export WM="bspwm"
 
 # ~/ Clean-up:
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+#export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs(like LightDM)
 export LESSHISTFILE="-"
-export ZDOTDIR="$HOME/.config/zsh"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export STACK_ROOT="$XDG_DATA_HOME/stack"
+export TERMINFO="$XDG_DATA_HOME/terminfo"
+export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/scripts/rofi/prompt-sudo-pass.sh"

@@ -13,6 +13,3 @@
 
 # ▰▰▰ timestamps ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 HIST_STAMPS=dd/mm/yyyy
-
-# ▰▰▰ paths ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-export PATH=$PATH:$HOME/Go/bin
