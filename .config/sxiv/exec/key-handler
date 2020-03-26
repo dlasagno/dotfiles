@@ -1,18 +1,5 @@
 #!/usr/bin/env sh
 
-#       ___           ___                                
-#      /\__\         /|  |                       ___     
-#     /:/ _/_       |:|  |         ___          /\  \    
-#    /:/ /\  \      |:|  |        /\__\         \:\  \   
-#   /:/ /::\  \   __|:|__|       /:/__/          \:\  \  
-#  /:/_/:/\:\__\ /::::\__\_____ /::\  \      ___  \:\__\ 
-#  \:\/:/ /:/  / ~~~~\::::/___/ \/\:\  \__  /\  \ |:|  | 
-#   \::/ /:/  /      |:|~~|      ~~\:\/\__\ \:\  \|:|  | 
-#    \/_/:/  /       |:|  |         \::/  /  \:\__|:|__| 
-#      /:/  /        |:|__|         /:/  /    \::::/__/  
-#      \/__/         |/__/          \/__/      ~~~~      
-
-
 # Called by sxiv(1) after the external prefix key (C-x by default) is pressed.
 # The next key combo is passed as its first argument. Passed via stdin are the
 # images to act upon, one path per line: all marked images, if in thumbnail
