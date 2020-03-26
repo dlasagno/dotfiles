@@ -40,8 +40,6 @@ export LESS_TERMCAP_se=$(tput sgr0)                 # reset reverse video
 export LESS_TERMCAP_us=$(tput setaf 2)              # begin underline
 export LESS_TERMCAP_ue=$(tput sgr0)                 # reset underline
 
-mpd >/dev/null 2>&1 &
-
 #[ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
 
 # Load miele settings
