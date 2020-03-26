@@ -12,7 +12,7 @@ export VISUAL="code"
 export TERMINAL="termite"
 export BROWSER="brave"
 export READER="zathura"
-export FILE="ranger"
+export FILE="lf"
 export STATUSBAR="polybar"
 export WM="bspwm"
 
