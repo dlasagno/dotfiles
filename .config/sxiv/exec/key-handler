@@ -13,42 +13,56 @@
 #      \/__/         |/__/          \/__/      ~~~~      
 
 
+# Called by sxiv(1) after the external prefix key (C-x by default) is pressed.
+# The next key combo is passed as its first argument. Passed via stdin are the
+# images to act upon, one path per line: all marked images, if in thumbnail
+# mode and at least one image has been marked, otherwise the current image.
+# sxiv(1) blocks until this script terminates. It then checks which images
+# have been modified and reloads them.
+
+# The key combo argument has the following form: "[C-][M-][S-]KEY",
+# where C/M/S indicate Ctrl/Meta(Alt)/Shift modifier states and KEY is the X
+# keysym as listed in /usr/include/X11/keysymdef.h without the "XK_" prefix.
+
+
+rotate() {
+	degree="$1"
+	tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read -r file; do
+		case "$(file -b -i "$file")" in
+		image/jpeg*) jpegtran -rotate "$degree" -copy all -outfile "$file" "$file" ;;
+		*)           mogrify  -rotate "$degree" "$file" ;;
+		esac
+	done
+}
+
+add_tags() {
+  tags=$(rofi -dmenu -p tag)
+  while read -r file; do
+    "$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" add "$file" $tags
+  done
+}
+
+set_props() {
+  props=$(printf "" | rofi -dmenu -p prop)
+  while read -r file; do
+    "$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" set "$file" $props
+  done
+}
+
+
+# Parse key combo
 case "$1" in
-  "a")
-    tag=$(printf "" | rofi -dmenu -p tag)
-    while read file; do
-      "$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" add "$file" $tag
-    done
-    ;;
-  
-  "p")
-    prop=$(printf "" | rofi -dmenu -p prop)
-    while read file; do
-      "$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" set "$file" $prop
-    done
-    ;;
-  
-  *)
-    while read file
-    do
-      fullpath="$(pwd)/$file"
+  # Configure wallpapers
+  "C-t")      add_tags ;;
+  "C-p")      set_props ;;
 
-      case "$1" in
-        # tests the wallpaper
-        "t")
-          wal -i "$file" -o ~/.config/wal/done.sh &
-          ;;
-
-        # saves the wallpaper to the pywal playlist
-        "s")
-          echo "$fullpath" >> ~/.config/wal/wallpapers
-          ;;
-        
-        # removes the wallpaper from the pywal playlist
-        "r")
-          grep -vwE "$fullpath" ~/.config/wal/wallpapers > ~/.config/wal/tmp && mv ~/.config/wal/tmp ~/.config/wal/wallpapers
-          ;;
-      esac
-    done
-    ;;
+  # Copy paths
+  "C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
+  # Copy image (recommended to be used with 1 image)
+  "C-c")      while read -r file; do xclip -selection clipboard -target image/png "$file"; done ;;
+  
+  # Rotate images
+  "C-comma")  rotate 270 ;;
+  "C-period") rotate  90 ;;
+  "C-minus")  rotate 180 ;;
 esac
