@@ -25,7 +25,7 @@ mountusb() { \
 		"vfat") sudo -A mount -t vfat "$chosen" "$mp" -o rw,umask=0000;;
 		*) sudo -A mount "$chosen" "$mp"; user="$(whoami)"; ug="$(groups | awk '{print $1}')"; sudo -A chown "$user":"$ug" "$mp";;
 	esac
-	notify-send "💻 USB mounting" "$chosen mounted to $mp."
+	notify-send " USB mounting" "$chosen mounted to $mp."
 	}
 
 mountandroid() { \

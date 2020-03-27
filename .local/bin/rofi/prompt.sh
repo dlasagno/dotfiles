@@ -1,12 +1,11 @@
 #!/usr/bin/env sh
 
-# This script opens a rofi based prompt
+# Opens a rofi based prompt
+# The first argument is the prompt text.
+# If "--hide" is passed as the second argument
+# the prompt will hide the input
 
-if [ "$2" = "--hide" ]; then
-  hide="-password"
-else 
-  hide=
-fi
+[ "$2" = "--hide" ] && hide="-password"
 
 rofi \
   -dmenu \

@@ -21,21 +21,13 @@ options="$power_off\n$reboot\n$lock\n$suspend\n$log_out"
 
 chosen="$(printf "%b" "$options" | $rofi_command -dmenu -selected-row 2)"
 case $chosen in
-    $power_off)
-        systemctl poweroff
-        ;;
-    $reboot)
-        systemctl reboot
-        ;;
-    $lock)
-        "$MIELE_SCRIPTS/lock-screen.sh"
-        ;;
+    $power_off) systemctl poweroff ;;
+    $reboot)    systemctl reboot ;;
+    $lock)      "$MIELE_SCRIPTS/lock-screen.sh" ;;
     $suspend)
         # mpc -q pause
         # amixer set Master mute
         systemctl suspend
         ;;
-    $log_out)
-        bspc quit
-        ;;
+    $log_out)   bspc quit ;;
 esac

@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 
-# Give rofi a list of unicode icons from remix icon to copy.
-# Shows the selected icon in dunst if running.
+# Gives rofi a list of unicode icons to copy.
+# The sets available are:
+# - remixicon
+# - fontawesome
+# - emoji
 
 unicode_modi_path="$MIELE_SCRIPTS/rofi/modi/copy-unicode.sh"
 remixicon_list="${XDG_DATA_HOME:-$HOME/.local/share}/miele/remixicon-list"
@@ -20,4 +23,3 @@ rofi \
   -modi "remixicon:$remixicon_modi,fontawesome:$fontawesome_modi,emoji:$emoji_modi" \
   -show remixicon \
   -theme themes/iconsmenu.rasi \
-  "$@"

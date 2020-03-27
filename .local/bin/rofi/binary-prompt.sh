@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
-# This script opens a rofi based binary prompt
+# Opens a rofi based binary prompt.
+# Receives the prompt text as argument.
+# Exits with 0 if "Yes", 1 if "No"
 
 choice=$(printf "Yes\nNo" | rofi \
   -dmenu \
@@ -13,5 +15,5 @@ choice=$(printf "Yes\nNo" | rofi \
 if [ "$choice" = "Yes" ]; then
   exit 0
 else
-  return 1
+  exit 1
 fi

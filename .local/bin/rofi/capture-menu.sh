@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Show a rofi menu for taking screenshots
+
 rofi_command="rofi -theme themes/capture-menu.rasi"
 
 ### Options ###
@@ -11,13 +13,7 @@ options="$screen\n$area\n$window"
 
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 1)"
 case $chosen in
-    $screen)
-        sleep 1; maim
-        ;;
-    $area)
-        maim -s
-        ;;
-    $window)
-        sleep 1; maim -i $(xdotool getactivewindow)
-        ;;
+    $screen) sleep 1; maim ;;
+    $area)   maim -s ;;
+    $window) sleep 1; maim -i "$(xdotool getactivewindow)" ;;
 esac
