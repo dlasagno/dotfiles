@@ -1,15 +1,16 @@
 #!/usr/bin/env sh
 
 lock_screen_wal='.cache/blurred-wal.jpg'
+resolution="$(xrandr | grep ' connected primary' | sed 's/.* \([0-9]\+x[0-9]\+\).*/\1/')"
 
 # source the colors and the wallpaper
 . "$HOME/.cache/wal/colors.sh"
 
 # prepare a blurred copy of the wallpaper
 convert "${wallpaper:?}" \
-  -resize 1920x1080^ \
+  -resize "$resolution^" \
   -gravity center \
-  -extent 1920x1080 \
+  -extent "$resolution" \
   -blur 0x3 \
   -quality 85% \
   "$HOME/$lock_screen_wal"
