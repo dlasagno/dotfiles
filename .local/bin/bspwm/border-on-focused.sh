@@ -1,24 +1,25 @@
 #!/usr/bin/env sh
 
 # Puts a border only on the focused windows
-# The script requires the width of border as an argument
+# The border width is taken from the current one
 # If the focused window is alone the border isn't applied
+
+border_width="$(bspc config border_width)"
+
+# Remove all borders
+bspc config border_width 0
 
 # Wait for a window to get focus
 bspc subscribe node_focus | while read -r event; do
-  node=$(echo "$event" | awk '{print $4}')
-  desktop=$(echo "$event" | awk '{print $3}')
+  node=$(echo "$event" | cut -d' ' -f4)
+  desktop=$(echo "$event" | cut -d' ' -f3)
 
   # Remove border from the previous focused window
-  if [ -n "$last_node" ]; then
-    bspc config -n "$last_node" border_width 0
-  fi
+  [ -n "$last_node" ] && bspc config -n "$last_node" border_width 0
 
   # Apply border to the focused window if not alone on its desktop
   windows_number="$(bspc query -N -d "$desktop" -n .leaf | wc -l)"
-  if [ "$windows_number" -gt 1 ]; then
-    bspc config -n "$node" border_width "$1"
-  fi
+  [ "$windows_number" -gt 1 ] && bspc config -n "$node" border_width "$border_width"
 
   last_node="$node"
 done

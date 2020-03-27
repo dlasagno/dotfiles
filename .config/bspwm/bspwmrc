@@ -43,7 +43,7 @@ bspc monitor HDMI-0 -d $(echo "$DESKTOP_NAMES" | cut -f5-9 -d " ")
 bspc monitor LVDS-1 -d $(echo "$DESKTOP_NAMES" | cut -f1-9 -d " ")
 
 # have border only on focused windows
-bspc config border_width 0
+bspc config border_width 1
 pkill -f border-on-focused.sh
 "$MIELE_SCRIPTS"/bspwm/border-on-focused.sh 1 &
 

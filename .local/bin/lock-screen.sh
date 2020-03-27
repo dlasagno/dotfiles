@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# Locks the screen
+
 lock_screen_wal='.cache/blurred-wal.jpg'
 resolution="$(xrandr | grep ' connected primary' | sed 's/.* \([0-9]\+x[0-9]\+\).*/\1/')"
 
