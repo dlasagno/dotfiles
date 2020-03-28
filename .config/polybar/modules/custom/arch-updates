@@ -6,4 +6,4 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.alert}
 
 double-click-left = $TERMINAL -e yay &
-click-right = $TERMINAL -e "$(echo -e "arch\naur" | rofi -dmenu -no-custom -format "yay -Syu --s" | sed s/arch/repo/)" &
+click-right = $TERMINAL -e "$(echo "arch\naur" | rofi -dmenu -no-custom -format "yay -Syu --s" | sed s/arch/repo/)" &
