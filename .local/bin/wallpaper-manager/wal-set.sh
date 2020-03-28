@@ -4,6 +4,7 @@
 # The script can be called in of those ways:
 # - wal-set <[+/-]tag-name>...
 # - wal-set <image>
+# If a "-" is passed, takes image file from stdin
 
 WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
 
@@ -18,10 +19,16 @@ fi
 # Get the wallpaper path
 if [ -f "$1" ]; then
    wallpaper="$1"
+elif [ "$1" = "-" ]; then
+   read -r wallpaper
+   if ! [ -f "$wallpaper" ]; then
+      printf "%s: No such file\n" "$wallpaper" >&2
+      exit 2
+   fi
 else
    wallpaper=$("$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" query "$WALLPAPERS_DIR/" "$@" | shuf -n 1)
    if ! [ -f "$wallpaper" ]; then
-      printf "Couldn't find any wallpaper with the specified tags\n"
+      printf "Couldn't find any wallpaper with the specified tags\n" >&2
       exit 2
    fi
 fi
