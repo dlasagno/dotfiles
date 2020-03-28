@@ -19,7 +19,7 @@ fi
 
 
 if [ "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" multi-monitor)" = "true" ]; then
-   multi_monitor="--no-xinerama"
+   multi_monitor="--no-randr"
 else
    multi_monitor=
 fi
@@ -44,8 +44,10 @@ wal \
    --backend "$backend" \
    $saturation
 
-feh \
-  "$wallpaper" \
-  --no-fehbg \
-  --bg-fill \
-  $multi_monitor
+# feh \
+#   "$wallpaper" \
+#   --no-fehbg \
+#   --bg-fill \
+#   $multi_monitor
+
+xwallpaper --zoom "$wallpaper" $multi_monitor
