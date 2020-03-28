@@ -1,53 +1,59 @@
 #!/usr/bin/env sh
 
 # This script is used to set a wallpaper
+# The script can be called in of those ways:
+# - wal-set <[+/-]tag-name>...
+# - wal-set <image>
 
 WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
 
 
-# check arguments
+# Check arguments
 if [ -z "$1" ]; then
-   printf "Use: wal-set <tags>...\n"
-   exit 1;
+   printf "Use: wal-set <[+/-]tag-name>...\n"
+   printf "Use: wal-set <image>\n"
+   exit 1
 fi
 
-wallpaper=$("$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" query "$WALLPAPERS_DIR/" "$@" | shuf -n 1)
-if ! [ -e "$wallpaper" ]; then
-   printf "Couldn't find any wallpaper with the specified tags\n"
-   exit 2;
+# Get the wallpaper path
+if [ -f "$1" ]; then
+   wallpaper="$1"
+else
+   wallpaper=$("$MIELE_SCRIPTS/wallpaper-manager/wal-tag.sh" query "$WALLPAPERS_DIR/" "$@" | shuf -n 1)
+   if ! [ -f "$wallpaper" ]; then
+      printf "Couldn't find any wallpaper with the specified tags\n"
+      exit 2
+   fi
 fi
 
-
+# Is it a multi-monitor compatible?
 if [ "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" multi-monitor)" = "true" ]; then
    multi_monitor="--no-randr"
-else
-   multi_monitor=
 fi
 
+# Adjust saturation if specified
 if [ -n "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" saturation)" ]; then
    saturation="--saturate $("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" saturation)"
-else
-   saturation=
 fi
 
+# Use a different backend if specified
 if [ -n "$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)" ]; then
-   backend="$("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)"
-else
-   backend="wal"
+   backend="--backend $("$MIELE_SCRIPTS/wallpaper-manager/wal-prop.sh" get "$wallpaper" backend)"
 fi
 
-
+# Run pywal to generate color scheme and update it
 wal \
    -i "$wallpaper" \
    -o "$HOME/.config/wal/done.sh" \
    -n \
-   --backend "$backend" \
+   $backend \
    $saturation
+
+# Set the wallpaper
+xwallpaper --zoom "$wallpaper" $multi_monitor
 
 # feh \
 #   "$wallpaper" \
 #   --no-fehbg \
 #   --bg-fill \
 #   $multi_monitor
-
-xwallpaper --zoom "$wallpaper" $multi_monitor
