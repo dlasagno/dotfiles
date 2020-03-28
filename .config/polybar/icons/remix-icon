@@ -44,6 +44,9 @@ usb-icon = 
 ramp-0 = 
 ramp-1 = 
 
+[module/updates-arch-combined]
+format-prefix = " "
+
 [module/volume-commons]
 ;format-volume-prefix = " "
 format-muted-prefix = " "
