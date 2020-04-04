@@ -11,7 +11,7 @@ window=""
 # Variable passed to rofi
 options="$screen\n$area\n$window"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 1)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 1 $@)"
 case $chosen in
     $screen) sleep 1; maim ;;
     $area)   maim -s ;;

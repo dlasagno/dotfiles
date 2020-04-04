@@ -7,9 +7,15 @@ SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 SCREENSHOT="$SCREENSHOTS_DIR/$(date +%s).png"
 
 
+if [ "$1" = "--clipboard" ]; then
+  clipboard="yes"
+else
+  clipboard="no"
+fi
+
 mkdir -p "$SCREENSHOTS_DIR"
 
-"$MIELE_SCRIPTS/rofi/capture-menu.sh" > "$SCREENSHOT"
+"$MIELE_SCRIPTS/rofi/capture-menu.sh" -p $clipboard > "$SCREENSHOT"
 
 # Delete the screenshot if it was unsuccessful
 if [ ! -s "$SCREENSHOT" ]; then
