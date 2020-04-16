@@ -42,6 +42,7 @@ case "$1" in
   # Configure wallpapers
   "C-t")      add_tags ;;
   "C-p")      set_props ;;
+  "C-w")      while read -r file; do "$MIELE_SCRIPTS/wallpaper-manager/wal-set.sh" "$file"; done ;;
 
   # Copy paths
   "C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
