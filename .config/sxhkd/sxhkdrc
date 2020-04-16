@@ -45,7 +45,7 @@ super + p
 	$HOME/.config/polybar/launch.sh
 
 # toggle compositor
-super + shift + c
+super + alt + c
 	pkill -x compton || compton -b
 
 # browser
@@ -57,7 +57,7 @@ super + d
 	discord
 
 # editor
-super + c
+super + shift + e
 	$VISUAL
 
 # editing shortucts
