@@ -33,7 +33,7 @@ super + @space
 super + alt + space; {i,n,m,shift + m,p}
 	$MIELE_SCRIPTS/rofi/{icon-list.sh,networkmenu.py,mount.sh,umount.sh,mpdmenu.sh}
 
-XF86Calculator
+{XF86Calculator, super + alt + space; c}
 	$MIELE_SCRIPTS/rofi/calc-menu.sh
 
 # make sxhkd reload its configuration files:
