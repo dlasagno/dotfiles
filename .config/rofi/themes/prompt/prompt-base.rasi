@@ -1,0 +1,8 @@
+@import "../shared/modifiers/v-center"
+
+@import "../list-view/list-view"
+@import "../list-view/modifiers/full"
+
+* {
+  list-view-padding: 0 350px;
+}

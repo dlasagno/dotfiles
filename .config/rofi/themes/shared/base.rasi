@@ -1,0 +1,22 @@
+/**
+ * Removes unwanted styles and sets up the base of the theme
+ */
+
+@import "~/.cache/wal/colors.rasi"
+
+
+// Theme settings
+* {
+  font-small: "monospace 11";
+  font-regular: "monospace 14";
+  font-big: "monospace 16";
+
+  icon-font: "monospace 40";
+}
+
+
+* {
+  background-color: #0000;
+  text-color: @foreground;
+  font: @font-regular;
+}

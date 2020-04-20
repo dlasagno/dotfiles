@@ -1,0 +1,16 @@
+/**
+ * This theme is intended for a 8x2 items list menu with a headerbar.
+ */
+ 
+@import "commons/settings.rasi"
+@import "commons/inputbar.rasi"
+@import "commons/listview.rasi"
+
+* {
+  background-color: @background;
+  text-color: @foreground-list;
+  font: @text-font;
+}
+#window {
+  padding: @list-8-window-padding;
+}

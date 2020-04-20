@@ -1,0 +1,77 @@
+/*
+ * Shows a menu of big buttons with icon to choose from.
+ *
+ * It is possible to apply the modifiers to make the menu
+ * fit the use case. It doesn't matter if the modifiers
+ * are imported before or after importing the option menu.
+ */
+
+@import "../shared/base"
+@import "../shared/modifiers/v-center"
+
+
+// Option-menu settings
+* {
+  option-menu-title: "title";
+  option-menu-margin: 0 100px; // Only horizontal margin should be applied
+  option-menu-spacing: 20px;
+
+  option-menu-icon-title-bar: [textbox-prompt-colon, prompt];
+  option-menu-icon-spacing: 50px;
+  option-menu-icon-font: @icon-font;
+  //padding: -4px -4px -15px -82px; sum this to fit icons (remixicon 40)
+  option-menu-icon-padding: 56px 56px 45px -22px;
+}
+
+
+window {
+  fullscreen: true;
+  background-color: @background;
+}
+  mainbox {
+    spacing: @option-menu-spacing;
+    margin: @option-menu-margin;
+  }
+    inputbar {
+      spacing: 0;
+      children: @option-menu-icon-title-bar;
+    }
+      prompt, textbox-prompt-colon {
+        expand: false;
+        padding: 0.5em 1em;
+        border: 2px;
+        border-color: @accent;
+      }
+      textbox-prompt-colon {
+        str: @option-menu-title;
+        background-color: @accent;
+        text-color: @background;
+      }
+      prompt {
+        background-color: @background-light;
+      }
+    listview {
+      layout: horizontal;
+      spacing: @option-menu-icon-spacing;
+    }
+      element {
+        font: @option-menu-icon-font;
+        padding: @option-menu-icon-padding;
+        background-color: @background-light;
+      }
+      element.urgent, element.active {
+        border: 5px 0;
+      }
+      element.active {
+        border-color: @accent;
+      }
+      element.urgent {
+        border-color: @foreground;
+      }
+      element.selected {
+        background-color: @accent;
+        text-color: @background;
+      }
+      element.selected.active {
+        text-color: @foreground;
+      }

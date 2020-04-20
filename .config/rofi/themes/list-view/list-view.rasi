@@ -1,0 +1,98 @@
+/*
+ * Shows a standard rofi menu.
+ *
+ * It is possible to apply the modifiers to make the menu
+ * fit the use case. It doesn't matter if the modifiers
+ * are imported before or after importing the option menu.
+ */
+
+@import "../shared/base"
+
+// List-view settings
+* {
+  list-view-anchor: center;
+  list-view-x-offset: 0;
+  list-view-y-offset: 0;
+  list-view-width: 500px;
+  list-view-height: 100%;
+  list-view-padding: 50px 30px;
+  list-view-spacing: 20px;
+
+  list-view-prompt-font: @font-big;
+  list-view-msg-font: @font-small;
+
+  list-view-input-placeholder: "type here";
+  list-view-lines: 10;
+  list-view-columns: 1;
+}
+
+window {
+  anchor: @list-view-anchor;
+  x-offset: @list-view-x-offset;
+  y-offset: @list-view-y-offset;
+  width: @list-view-width;
+  height: @list-view-height;
+  padding: @list-view-padding;
+  background-color: @background;
+}
+  mainbox {
+    spacing: 1em;
+  }
+    inputbar {
+      orientation: vertical;
+      spacing: 0;
+      children: [prompt, entry];
+    }
+      prompt {
+        font: @list-view-prompt-font;
+        padding: 0.5em;
+      }
+      entry {
+        placeholder: @list-view-input-placeholder;
+        placeholder-color: @background;
+        blink: true;
+        padding: 0.5em 1em;
+        background-color: @background-light;
+      }
+    message {
+      padding: 0.5em 1em;
+      background-color: @background;
+    }
+      textbox {
+        text-color: @background-focus;
+        font: @list-view-msg-font;
+      }
+    listview {
+      spacing: 4px;
+      lines: @list-view-lines;
+      columns: @list-view-columns;
+    }
+      element {
+        padding: 0.5em 0.25em;
+        border: 0 0 0 8px;
+        background-color: @background-light;
+        border-color: @background-light;
+        font: @list-view-element-font;
+      }
+      element.active {
+        border-color: @accent;
+        text-color: @accent;
+      }
+      element.urgent {
+        border-color: @foreground;
+      }
+      element.selected {
+        border-color: @accent;
+        background-color: @background-focus;
+      }
+      element.selected.active {
+        text-color: @accent;
+      }
+    mode-switcher {
+      background-color: @background-light;
+    }
+      button.selected {
+        background-color: @background-focus;
+      }
+
+      

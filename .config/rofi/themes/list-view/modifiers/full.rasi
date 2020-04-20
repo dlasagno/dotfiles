@@ -1,0 +1,9 @@
+/*
+ * Puts the list view in full-screen
+ */
+
+* {
+  list-view-width: 100%;
+  list-view-height: 100%;
+  list-view-columns: 2;
+}

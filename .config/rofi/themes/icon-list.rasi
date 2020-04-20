@@ -1,2 +1,6 @@
 @import "list-view/list-view"
 @import "list-view/modifiers/right"
+
+* {
+  list-view-columns: 2;
+}

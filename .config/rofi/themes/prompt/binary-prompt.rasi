@@ -1,0 +1,22 @@
+/*
+ * Shows a binary prompt
+ */
+
+@import "prompt-base"
+
+* {
+  list-view-lines: 1;
+  list-view-columns: 2;
+}
+
+entry {
+  enabled: false;
+}
+element {
+  border: 0;
+  background-color: @background-light;
+}
+element.selected {
+  background-color: @accent;
+  text-color: @background;
+}

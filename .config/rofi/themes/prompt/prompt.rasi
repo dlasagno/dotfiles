@@ -1,0 +1,9 @@
+/*
+ * Shows a text prompt
+ */
+
+@import "prompt-base"
+
+listview {
+  enabled: false;
+}

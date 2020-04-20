@@ -22,4 +22,4 @@ xclip -h >/dev/null 2>&1 || exit
 rofi \
   -modi "remixicon:$remixicon_modi,fontawesome:$fontawesome_modi,emoji:$emoji_modi" \
   -show remixicon \
-  -theme themes/iconsmenu.rasi \
+  -theme themes/icon-list.rasi \

@@ -1,0 +1,8 @@
+/*
+ * Puts the list view to the right
+ */
+
+* {
+  list-view-anchor: east;
+  list-view-x-offset: 50%;
+}

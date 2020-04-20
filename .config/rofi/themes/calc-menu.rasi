@@ -1,16 +1,2 @@
-@import "commons/settings.rasi"
-@import "commons/inputbar.rasi"
-@import "commons/listview.rasi"
-
-* {
-  background-color: @background;
-  text-color: @foreground-list;
-  font: @text-font;
-}
-#window {
-  padding: @list-8-window-padding;
-}
-
-#textbox-prompt-colon {
-  str: "  ";
-}
+@import "list-view/list-view"
+@import "list-view/modifiers/right"

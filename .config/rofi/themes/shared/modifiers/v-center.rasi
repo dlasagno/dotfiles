@@ -1,0 +1,10 @@
+/*
+ * Vertically centers the mainbox
+ */
+
+window {
+  children: [spacer, mainbox, spacer];
+}
+mainbox {
+  expand: false;
+}

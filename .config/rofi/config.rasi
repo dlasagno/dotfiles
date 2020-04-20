@@ -2,7 +2,7 @@ configuration {
   show-icons:         true;
   icon-theme:         "Tela-orange";
 
-  theme: "~/.cache/wal/colors-rofi-dark.rasi";
+  //theme: "~/.cache/wal/colors-rofi-dark.rasi";
   theme: "~/.config/rofi/themes/appsmenu.rasi";
 
   cycle:              true;
@@ -10,7 +10,6 @@ configuration {
   disable-history:    false;
   modi:               "drun,run,window";
   display-drun:       "apps";
-  columns: 1;
 
   terminal: "termite";
 }

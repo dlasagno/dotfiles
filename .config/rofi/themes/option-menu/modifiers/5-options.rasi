@@ -1,0 +1,7 @@
+/*
+ * Centers a menu of 5 options
+ */
+
+* {
+  option-menu-margin: 0 170px;
+}

@@ -9,7 +9,7 @@ choice=$(printf "Yes\nNo" | rofi \
   -p "$1" \
   -i \
   -only-match \
-  -theme themes/binary-prompt.rasi
+  -theme themes/prompt/binary-prompt.rasi
 )
 
 if [ "$choice" = "Yes" ]; then

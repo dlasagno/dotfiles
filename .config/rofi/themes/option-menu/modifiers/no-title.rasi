@@ -1,0 +1,8 @@
+/*
+ * Removes the title bar(inputbar) from the option menu
+ */
+
+* {
+  option-menu-spacing: 0;
+  option-menu-icon-title-bar: [];
+}
