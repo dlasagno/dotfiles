@@ -17,6 +17,7 @@ getmount() { \
 
 mountusb() { \
 	chosen="$(echo "$usbdrives" | rofi -dmenu -i -p "Mount which drive?" | awk '{print $1}')"
+	[ -z "$chosen" ] && exit 0
 	sudo -A mount "$chosen" 2>/dev/null && notify-send " USB mounting" "$chosen mounted." && exit 0
 	alreadymounted=$(lsblk -nrpo "name,type,mountpoint" | awk '$2=="part"&&$3!~/\/boot|\/home$|SWAP/&&length($3)>1{printf "-not \\( -path *%s -prune \\) \\ \n",$3}')
 	getmount "/mnt /media /mount /home -maxdepth 5 -type d $alreadymounted"
