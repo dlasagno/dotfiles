@@ -11,4 +11,4 @@ rofi \
   -dmenu \
   -p "$1" \
   $hide \
-  -theme themes/prompt.rasi
+  -theme themes/prompt/prompt.rasi

@@ -13,7 +13,7 @@
   list-view-anchor: center;
   list-view-x-offset: 0;
   list-view-y-offset: 0;
-  list-view-width: 500px;
+  list-view-width: 35%;
   list-view-height: 100%;
   list-view-padding: 50px 30px;
   list-view-spacing: 20px;
@@ -21,7 +21,7 @@
   list-view-prompt-font: @font-big;
   list-view-msg-font: @font-small;
 
-  list-view-input-placeholder: "type here";
+  list-view-input-placeholder: "Type here";
   list-view-lines: 10;
   list-view-columns: 1;
 }
@@ -49,7 +49,7 @@ window {
       }
       entry {
         placeholder: @list-view-input-placeholder;
-        placeholder-color: @background;
+        placeholder-color: @background-focus;
         blink: true;
         padding: 0.5em 1em;
         background-color: @background-light;

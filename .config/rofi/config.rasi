@@ -3,7 +3,7 @@ configuration {
   icon-theme:         "Tela-orange";
 
   //theme: "~/.cache/wal/colors-rofi-dark.rasi";
-  theme: "~/.config/rofi/themes/appsmenu.rasi";
+  theme: "~/.config/rofi/themes/default.rasi";
 
   cycle:              true;
   hide-scrollbar:     true;

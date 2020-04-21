@@ -13,6 +13,13 @@
 
   icon-font: "monospace 40";
 }
+@media(min-width: 1920) {
+  * {
+    font-big: "monospace 22";
+    
+    icon-font: "monospace 55";
+  }
+}
 
 
 * {

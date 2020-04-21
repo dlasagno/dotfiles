@@ -22,6 +22,12 @@
   //padding: -4px -4px -15px -82px; sum this to fit icons (remixicon 40)
   option-menu-icon-padding: 56px 56px 45px -22px;
 }
+@media(min-width: 1920) {
+  * {
+    //padding: -7px -6px -23px; sum this to fit icons (remixicon 55)
+    option-menu-icon-padding: 53px 54px 37px;
+  }
+}
 
 
 window {
@@ -55,10 +61,15 @@ window {
       spacing: @option-menu-icon-spacing;
     }
       element {
-        font: @option-menu-icon-font;
-        padding: @option-menu-icon-padding;
         background-color: @background-light;
       }
+        element-text {
+          font: @option-menu-icon-font;
+          padding: @option-menu-icon-padding;
+        }
+        element-icon {
+          enabled: false;
+        }
       element.urgent, element.active {
         border: 5px 0;
       }

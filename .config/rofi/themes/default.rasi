@@ -1,3 +1,2 @@
 @import "list-view/list-view"
 @import "list-view/modifiers/right"
-@import "list-view/modifiers/big-icons"

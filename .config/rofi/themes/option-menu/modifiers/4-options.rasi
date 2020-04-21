@@ -5,3 +5,8 @@
 * {
   option-menu-margin: 0 277px;
 }
+@media(min-width: 1920) {
+  * {
+    option-menu-margin: 0 522px;
+  }
+}

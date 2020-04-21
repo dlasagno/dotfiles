@@ -1,0 +1,13 @@
+/*
+ * Increase the size of icons
+ */
+
+element {
+  spacing: 0.5em;
+}
+  element-text {
+    margin: 0.5em 0;
+  }
+  element-icon {
+    size: 2em;
+  }
