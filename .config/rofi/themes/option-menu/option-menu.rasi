@@ -19,8 +19,9 @@
   option-menu-icon-title-bar: [textbox-prompt-colon, prompt];
   option-menu-icon-spacing: 50px;
   option-menu-icon-font: @icon-font;
-  //padding: -4px -4px -15px -82px; sum this to fit icons (remixicon 40)
-  option-menu-icon-padding: 56px 56px 45px -22px;
+  //padding: --4px -4px -16px; sum this to fit icons (remixicon 40)
+  //option-menu-icon-padding: 56px 56px 45px -22px;
+  option-menu-icon-padding: 56px 56px 44px;
 }
 @media(min-width: 1920) {
   * {
